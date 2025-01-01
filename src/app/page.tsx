@@ -4,7 +4,9 @@ import {JSX} from "react";
 const Home: NextPage = (): JSX.Element => {
   return (
       <>
-        Hello
+          <h1 className="text-bold text-2xl">
+              Hello world!
+          </h1>
       </>
   );
 }
