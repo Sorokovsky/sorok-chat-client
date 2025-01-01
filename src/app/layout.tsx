@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import React, {FC, JSX, ReactNode} from "react";
+import "../styles/global.sass"
 
 export const metadata: Metadata = {
   title: {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 const RootLayout: FC<Readonly<{children: ReactNode;}>> = ({children}): JSX.Element => {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={"en"} suppressHydrationWarning>
     <body>
     {children}
       </body>
