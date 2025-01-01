@@ -11,7 +11,6 @@ export const Header: FC<{server: string}> = ({server}): JSX.Element => {
     useEffect(() => {
         if(data?.avatarPath !== undefined) {
             setPath(server + "/" + data?.avatarPath);
-            console.log(path);
         }
     }, [data]);
     return (
