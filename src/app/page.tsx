@@ -1,14 +1,12 @@
-import {NextPage} from "next";
-import {JSX} from "react";
-
+"use client"
+import {type NextPage} from "next";
+import {type JSX} from "react";
 const Home: NextPage = (): JSX.Element => {
-  return (
-      <>
-          <h1 className="text-[30px] font-bold">
-              Hello world!
-          </h1>
-      </>
-  );
+    return (
+        <>
+
+        </>
+    );
 }
 
 export default Home;

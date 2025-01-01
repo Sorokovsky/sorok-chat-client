@@ -24,6 +24,11 @@
       "@/hooks/*": ["./src/hooks/*"],
       "@/store/*": ["./src/store/*"],
       "@/ui/*": ["./src/components/ui/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/types/*": ["./src/contracts/types/*"],
+      "@/enums/*": ["./src/contracts/enums/*"],
+      "@/constants/*": ["./src/contracts/constants/*"],
       "@/*": ["./src/*"]
     }
   },
