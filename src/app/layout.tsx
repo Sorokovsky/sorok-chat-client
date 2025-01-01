@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import React, {FC, JSX, ReactNode} from "react";
-import "../styles/global.sass"
+import "@/styles/global.sass"
 
 export const metadata: Metadata = {
   title: {
