@@ -1,5 +1,5 @@
 "use client"
-import {type FC, type JSX } from "react";
+import {type FC, type JSX} from "react";
 import cn from 'clsx';
 import styles from "@/components/header/header.module.sass"
 import {useProfile} from "@/hooks/use-profile.hook";
