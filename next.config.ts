@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 import {type Rewrite} from "next/dist/lib/load-custom-routes";
-import {API_URL} from "@/constants/common.constant";
+import {API_URL, FILES_PREFIX} from "@/constants/common.constant";
 import {getApiURL, getServerURL} from "@/utils/backand";
 import {EnvironmentKeys} from "@/enums/environment-keys.enum";
 
@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
             {
                 source: `${API_URL}/:path*`,
                 destination: `${apiURL}/:path*`,
+            },
+            {
+                source: `${FILES_PREFIX}/:path*`,
+                destination: `${serverUrl}/:path*`
             }
         ] as Rewrite[];
     },
