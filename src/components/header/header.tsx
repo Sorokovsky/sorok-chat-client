@@ -1,17 +1,18 @@
 "use client"
-import {type FC, type JSX} from "react";
+import {type FC, type JSX, useEffect} from "react";
 import cn from 'clsx';
 import styles from "@/components/header/header.module.sass"
-import {useProfile} from "@/hooks/use-profile.hook";
-import {Avatar} from "@/components/avatar/avatar";
+import {CurrentUserAvatar} from "@/components/current-user-avatar/current-user-avatar";
 
 export const Header: FC = (): JSX.Element => {
-    const { data } = useProfile();
+    useEffect(() => {
+        console.log('rendered')
+    }, [])
     return (
         <header
             className={cn(styles.header)}
         >
-            <Avatar avatarPath={data?.avatarPath} />
+            <CurrentUserAvatar />
         </header>
     );
 }
