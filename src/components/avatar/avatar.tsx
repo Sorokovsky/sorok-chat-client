@@ -8,14 +8,14 @@ import {DEFAULT_AVATAR_SIZE} from "@/constants/common.constant";
 interface Props {
     avatarPath?: string,
     size?: number,
-    onclick?: MouseEventHandler<HTMLButtonElement>,
+    onClick?: MouseEventHandler<HTMLButtonElement>,
 }
 
-export const Avatar: FC<Props> = ({avatarPath = "", size = DEFAULT_AVATAR_SIZE, onclick = (): void => {}}: Props): JSX.Element => {
+export const Avatar: FC<Props> = ({avatarPath = "", size = DEFAULT_AVATAR_SIZE, onClick = (): void => {}}: Props): JSX.Element => {
     return (
       <button
           type={"button"}
-          onClick={onclick}
+          onClick={onClick}
           className={cn(styles.avatar)}
       >
           <Image
