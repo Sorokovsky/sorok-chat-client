@@ -7,3 +7,4 @@ export const DEFAULT_AVATAR: string = "/avatar.svg";
 export const DEFAULT_AVATAR_SIZE: number = 50;
 export const RETRIES_FETCH_COUNT: number = 5;
 export const REFETCH_INTERVAL: number = 1000 * 10;
+export const ICON_SIZE: number = 25;
