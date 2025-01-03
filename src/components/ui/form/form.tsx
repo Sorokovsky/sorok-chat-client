@@ -4,13 +4,14 @@ import {useForm} from "react-hook-form";
 import {type FormField} from "@/types/form-field.type";
 import cn from "clsx";
 import styles from "./form.module.sass"
+import {Loader} from "@/ui/loader/loader";
 
 interface Props {
     form: FormType;
 }
 
 export const Form: FC<Props> = ({form}: Props): JSX.Element => {
-    const { handleSubmit, register } = useForm();
+    const { handleSubmit, register, formState } = useForm();
     return (
         <form
             className={cn(styles.form)}
@@ -26,7 +27,7 @@ export const Form: FC<Props> = ({form}: Props): JSX.Element => {
                     />
                 </label>
             ))}
-            <button type={"submit"}>{form.submitText}</button>
+            <button disabled={formState.isLoading} type={"submit"}>{formState.isLoading ? <Loader /> : form.submitText}</button>
         </form>
     );
 }
