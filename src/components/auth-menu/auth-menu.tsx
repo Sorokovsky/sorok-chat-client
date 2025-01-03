@@ -4,16 +4,19 @@ import {LOGIN_ROUTE, LOGOUT_ROUTE, REGISTER_ROUTE} from "@/constants/routes.cons
 import cn from "clsx";
 import styles from "./auth-menu.module.sass";
 import {useIsAuth} from "@/hooks/use-is-auth.hook";
+import {Loader} from "@/ui/loader/loader";
 
 export const AuthMenu: FC = (): JSX.Element => {
-    const isAuth: boolean = useIsAuth();
+    const {isAuth, isPending} = useIsAuth();
     return (
         <div className={cn(styles.auth)}>
-            {isAuth ? <MenuLink route={LOGOUT_ROUTE} /> : (
-                <>
-                <MenuLink route={REGISTER_ROUTE}/>
-                <MenuLink route={LOGIN_ROUTE}/>
-                </>
+            {
+                isPending ? <Loader /> :
+                isAuth ? <MenuLink route={LOGOUT_ROUTE}/> : (
+                    <>
+                        <MenuLink route={REGISTER_ROUTE}/>
+                        <MenuLink route={LOGIN_ROUTE}/>
+                    </>
                 )
             }
         </div>

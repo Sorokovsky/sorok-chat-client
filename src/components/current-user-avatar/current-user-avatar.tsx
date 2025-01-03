@@ -2,12 +2,13 @@
 import { type FC, type JSX} from "react";
 import {Avatar} from "@/ui/avatar/avatar";
 import {useProfile} from "@/hooks/use-profile.hook";
+import {Loader} from "@/ui/loader/loader";
 
 export const CurrentUserAvatar: FC = (): JSX.Element => {
-    const {data} = useProfile();
+    const {data, isPending} = useProfile();
     return (
         <>
-            <Avatar avatarPath={data?.avatarPath} />
+            {isPending ? <Loader /> : <Avatar avatarPath={data?.avatarPath}/>}
         </>
     )
 }
