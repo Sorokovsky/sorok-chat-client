@@ -18,7 +18,10 @@ export const useMutation = <T, V>(
     const { mutate, isPending, isSuccess, isError, error } = useMutationFetch({
         mutationKey: keys,
         mutationFn: callback as MutateFunction,
-        onSuccess: () => {cache?.reset()}
+        onSuccess: () => {
+            cache?.reset();
+            client.invalidateQueries({queryKey: refreshKeys});
+        }
     });
     return {mutate, isPending, isSuccess, isError, error} as MutationResult<T>
 }
