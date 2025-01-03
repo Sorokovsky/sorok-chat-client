@@ -18,7 +18,7 @@ export const useMutation = <T, V>(
     const { mutate, isPending, isSuccess, isError, error } = useMutationFetch({
         mutationKey: keys,
         mutationFn: callback as MutateFunction,
-        onSuccess: () => refreshKeys.length > 0 ? cache?.reset() : globalCache.clear()
+        onSuccess: () => {cache?.reset()}
     });
     return {mutate, isPending, isSuccess, isError, error} as MutationResult<T>
 }

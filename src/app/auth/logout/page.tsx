@@ -9,7 +9,7 @@ import {pagesService} from "@/services/pages.service";
 const Logout: NextPage = (): JSX.Element => {
     const { mutate: logout } = useLogout();
     const router: AppRouterInstance = useRouter();
-    useEffect((): void => {
+    useEffect(() => {
         logout();
         router.replace(pagesService.home);
     }, []);
