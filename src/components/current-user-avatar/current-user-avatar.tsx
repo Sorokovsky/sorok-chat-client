@@ -6,6 +6,8 @@ import {useProfile} from "@/hooks/use-profile.hook";
 export const CurrentUserAvatar: FC = (): JSX.Element => {
     const {data} = useProfile();
     return (
-        <Avatar avatarPath={data?.avatarPath} />
+        <>
+            <Avatar avatarPath={data?.avatarPath} />
+        </>
     )
 }
