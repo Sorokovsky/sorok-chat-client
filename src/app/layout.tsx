@@ -14,11 +14,13 @@ export const metadata: Metadata = {
 
 const RootLayout: FC<Readonly<{children: ReactNode;}>> = ({children}): JSX.Element => {
   return (
-      <html lang={"en"} suppressHydrationWarning>
-      <body>
+      <html className={"h-full"} lang={"en"} suppressHydrationWarning>
+      <body className={"h-full flex flex-col"}>
           <Provider>
               <Header />
-              {children}
+              <div className={"flex-grow"}>
+                  {children}
+              </div>
           </Provider>
       </body>
       </html>

@@ -10,7 +10,7 @@ const Logout: NextPage = (): JSX.Element => {
     const { mutate: logout, isPending } = useLogout();
     const router: AppRouterInstance = useRouter();
     useEffect(() => {
-        logout();
+        logout(null);
         router.back();
     }, []);
     return (

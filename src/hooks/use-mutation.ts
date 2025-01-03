@@ -11,7 +11,7 @@ export const useMutation = <T, V>(
     keys: QueryKeys[],
     callback: V,
     refreshKeys: QueryKeys[] = []
-): MutationResult<T> => {
+): MutationResult => {
     const client: QueryClient = useQueryClient();
     const globalCache: QueryCache = client.getQueryCache();
     const cache = globalCache.find({queryKey: refreshKeys, exact: false});
@@ -23,5 +23,5 @@ export const useMutation = <T, V>(
             client.invalidateQueries({queryKey: refreshKeys});
         }
     });
-    return {mutate, isPending, isSuccess, isError, error} as MutationResult<T>
+    return {mutate, isPending, isSuccess, isError, error} as MutationResult
 }
