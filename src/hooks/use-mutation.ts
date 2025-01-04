@@ -20,6 +20,7 @@ export const useMutation = <T, V>(
         mutationKey: keys,
         mutationFn: callback as MutateFunction,
         retry: RETRIES_FETCH_COUNT,
+
         onSuccess: () => {
             cache?.reset();
             client.invalidateQueries({queryKey: refreshKeys});
