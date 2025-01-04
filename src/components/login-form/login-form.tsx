@@ -3,7 +3,7 @@ import {Input} from "@/ui/input/input";
 import {Button} from "@/ui/button/button";
 import {Form} from "@/ui/form/form";
 import {useForm} from "react-hook-form";
-import {LoginUser} from "@/types/models/auth/login.type";
+import {type LoginUser} from "@/types/models/auth/login.type";
 import {useLogin} from "@/hooks/use-login.hook";
 
 export const LoginForm: FC = (): JSX.Element => {
