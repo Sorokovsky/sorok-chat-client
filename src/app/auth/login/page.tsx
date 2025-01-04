@@ -35,15 +35,17 @@ const LoginPage: NextPage = (): JSX.Element => {
                         onSubmit={handleSubmit(login)}
                     >
                         <Input
+                            label={"Email"}
                             type={"email"}
-                            placeholder={"Email"}
+                            placeholder={"Enter email"}
                             {...register("email", {
                                 required: true,
                             })}
                         />
                         <Input
+                            label={"Password"}
                             type={"password"}
-                            placeholder={"Password"}
+                            placeholder={"Enter password"}
                             {...register("password", {
                                 required: true,
                             })}
