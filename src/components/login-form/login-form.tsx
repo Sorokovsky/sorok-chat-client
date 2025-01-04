@@ -5,6 +5,8 @@ import {Form} from "@/ui/form/form";
 import {useForm} from "react-hook-form";
 import {type LoginUser} from "@/types/models/auth/login.type";
 import {useLogin} from "@/hooks/use-login.hook";
+import {Heading} from "@/ui/heading/heading";
+import {HeadingTags} from "@/enums/heading-tags.enum";
 
 export const LoginForm: FC = (): JSX.Element => {
     const { handleSubmit, register } = useForm<LoginUser>();
@@ -17,6 +19,7 @@ export const LoginForm: FC = (): JSX.Element => {
             <Form
                 onSubmit={handleSubmit(login)}
             >
+                <Heading tag={HeadingTags.H1}>Login form</Heading>
                 <Input
                     label={"Email"}
                     type={"email"}
