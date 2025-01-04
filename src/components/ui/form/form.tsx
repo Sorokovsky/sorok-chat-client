@@ -1,33 +1,16 @@
-import {type FC, type JSX} from "react";
-import {type Form as FormType} from "@/types/form.type";
-import {useForm} from "react-hook-form";
-import {type FormField} from "@/types/form-field.type";
+import {type FC, type FormHTMLAttributes, type JSX} from "react";
 import cn from "clsx";
-import styles from "./form.module.sass"
-import {Loader} from "@/ui/loader/loader";
+import styles from "./form.module.sass";
 
-interface Props {
-    form: FormType;
-}
+type Props = FormHTMLAttributes<HTMLFormElement>;
 
-export const Form: FC<Props> = ({form}: Props): JSX.Element => {
-    const { handleSubmit, register, formState } = useForm();
+export const Form: FC<Props> = ({className, children, ...rest}: Props): JSX.Element => {
     return (
         <form
-            className={cn(styles.form)}
-            onSubmit={handleSubmit(form.onSubmit)}
+            className={cn(styles.form, className)}
+            {...rest}
         >
-            {form.fields.map(({name, type, label, options, palaceholder}: FormField) => (
-                <label key={name}>
-                    {label}
-                    <input
-                        type={type}
-                        placeholder={palaceholder}
-                        {...register(name, options)}
-                    />
-                </label>
-            ))}
-            <button disabled={formState.isLoading} type={"submit"}>{formState.isLoading ? <Loader /> : form.submitText}</button>
+            {children}
         </form>
     );
 }

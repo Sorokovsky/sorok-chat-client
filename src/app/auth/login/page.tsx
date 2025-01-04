@@ -6,16 +6,21 @@ import {useRouter} from "next/navigation";
 import {type AppRouterInstance} from "next/dist/shared/lib/app-router-context.shared-runtime";
 import {Loader} from "@/ui/loader/loader";
 import {Form} from "@/ui/form/form";
-import {useGetLoginForm} from "@/hooks/use-login-form.hook";
-import {type LoginUser} from "@/types/models/auth/login.type";
-import { Form as FormType } from "@/types/form.type"
-import {FieldValues} from "react-hook-form";
-
+import {Button} from "@/ui/button/button";
+import {useForm} from "react-hook-form";
+import {LoginUser} from "@/types/models/auth/login.type";
+import {useLogin} from "@/hooks/use-login.hook";
+import {Input} from "@/ui/input/input";
+import {register} from "next/dist/client/components/react-dev-overlay/pages/client";
 const LoginPage: NextPage = (): JSX.Element => {
     const {isAuth, isPending: isFetch} = useIsAuth();
     const router: AppRouterInstance = useRouter();
+    const { mutate } = useLogin();
     const [isLoading, setIsLoading] = useState(false);
-    const form: FormType<LoginUser> = useGetLoginForm();
+    const { handleSubmit, register } = useForm<LoginUser>();
+    const login = (login: LoginUser) => {
+        mutate(login);
+    }
     useEffect(() => {
         if(isAuth) router.back();
     }, [isAuth]);
@@ -26,7 +31,25 @@ const LoginPage: NextPage = (): JSX.Element => {
         <div className={"center"}>
             {isLoading ? <Loader /> : (
                 <>
-                    <Form form={form as unknown as FormType<FieldValues>} />
+                    <Form
+                        onSubmit={handleSubmit(login)}
+                    >
+                        <Input
+                            type={"email"}
+                            placeholder={"Email"}
+                            {...register("email", {
+                                required: true,
+                            })}
+                        />
+                        <Input
+                            type={"password"}
+                            placeholder={"Password"}
+                            {...register("password", {
+                                required: true,
+                            })}
+                        />
+                        <Button>Login</Button>
+                    </Form>
                 </>
             )}
         </div>
