@@ -3,6 +3,8 @@ import {api} from "@/utils/api";
 import {type AxiosResponse} from "axios";
 import {type Register} from "@/types/models/auth/register.type";
 import {type GetUser} from "@/types/models/users/get-user.type";
+import toast from "react-hot-toast";
+import {SUCCESS_LOGIN, SUCCESS_LOGOUT, SUCCESS_REGISTER} from "@/constants/messages.constant";
 
 class AuthService {
     private readonly baseUrl: string = '/auth';
@@ -11,16 +13,19 @@ class AuthService {
     private readonly logoutUrl: string = `${this.baseUrl}/logout`;
     public async login(login: LoginUser): Promise<void> {
         const response: AxiosResponse<void> = await api.patch(this.loginUrl, login);
+        if(response) toast.success(SUCCESS_LOGIN);
         return response.data;
     }
 
     public async register(register: Register): Promise<GetUser> {
         const response: AxiosResponse<GetUser> = await api.post(this.registerUrl, register);
+        if(response) toast.success(SUCCESS_REGISTER)
         return response.data;
     }
 
     public async logout(): Promise<void> {
         const response: AxiosResponse<void> = await api.delete(this.logoutUrl);
+        if(response) toast.success(SUCCESS_LOGOUT);
         return response.data;
     }
 }

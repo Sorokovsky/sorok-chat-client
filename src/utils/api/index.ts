@@ -1,5 +1,5 @@
 import axios, {type AxiosInstance} from "axios";
-import {onRequest, onResponse} from "@/utils/api/interseptors/auth.interseptor";
+import {onError, onRequest, onResponse} from "@/utils/api/interseptors/auth.interseptor";
 import {API_URL} from "@/constants/common.constant";
 
 export const api: AxiosInstance = axios.create({
@@ -7,5 +7,5 @@ export const api: AxiosInstance = axios.create({
     withCredentials: true,
 });
 
-api.interceptors.request.use(onRequest);
-api.interceptors.response.use(onResponse)
+api.interceptors.request.use(onRequest, onError);
+api.interceptors.response.use(onResponse, onError)
