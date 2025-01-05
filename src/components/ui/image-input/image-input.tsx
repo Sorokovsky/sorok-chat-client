@@ -4,14 +4,14 @@ import {
     type ChangeEventHandler,
     type FC,
     type InputHTMLAttributes,
-    type JSX, useEffect,
+    type JSX,
     useRef,
     useState
 } from "react";
 import cn from "clsx";
 import styles from "./image-input.module.sass";
 import Image from "next/image";
-import {useFileToSrcHook} from "@/hooks/use-file-to-src.hook";
+import {useFileToSrc} from "@/hooks/use-file-to.src";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
     label: string;
@@ -20,7 +20,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 export const ImageInput: FC<Props> = ({className, label, ...rest}: Props): JSX.Element => {
     const input = useRef<HTMLInputElement>(null);
     const [file, setFile] = useState<File | null>(null);
-    const src: string = useFileToSrcHook(file);
+    const src: string = useFileToSrc(file);
     const onChange: ChangeEventHandler<HTMLInputElement> = (event: ChangeEvent<HTMLInputElement>) => {
         const {target} = event;
         setFile(target.files?.[0] || null);
@@ -41,7 +41,14 @@ export const ImageInput: FC<Props> = ({className, label, ...rest}: Props): JSX.E
                 onChange={onChange}
                 multiple={false}
             />
-            {src !== "" && <Image src={src} alt={"avatar"} width={10} height={10} />}
+            {src !== "" && <Image
+                src={src}
+                className={cn(styles.preview)}
+                alt={"avatar"}
+                layout={"fill"}
+                objectFit={"cover"}
+            />
+            }
         </label>
     );
 }
