@@ -9,3 +9,4 @@ export const RETRIES_FETCH_COUNT: number = 0;
 export const REFETCH_INTERVAL: number = 1000 * 10;
 export const ICON_SIZE: number = 25;
 export const DEFAULT_ICON_COLOR: string = "white";
+export const NOTIFICATION_DURATION_MILLISECONDS: number = 1000;
