@@ -45,8 +45,8 @@ export const ImageInput: FC<Props> = ({className, label, ...rest}: Props): JSX.E
                 src={src}
                 className={cn(styles.preview)}
                 alt={"avatar"}
-                layout={"fill"}
-                objectFit={"cover"}
+                width={0}
+                height={0}
             />
             }
         </label>
