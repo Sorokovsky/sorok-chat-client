@@ -11,7 +11,7 @@ const LoginPage: NextPage = (): JSX.Element => {
     const router: AppRouterInstance = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
-        if(isAuth) router.back();
+       if(isAuth) router.back();
     }, [isAuth]);
     useEffect(() => {
         setIsLoading(isFetch)
