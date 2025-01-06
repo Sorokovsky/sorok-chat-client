@@ -1,9 +1,12 @@
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 import { useIsAuth } from './use-is-auth.hook';
 export const useForAuth = () => {
     const { isAuth } = useIsAuth();
     const router = useRouter();
-    if (isAuth === false) {
-        router.back();
-    }
+    useEffect(() => {
+        if (isAuth === false) {
+          router.back();
+        }
+    }, [isAuth]);
 }
