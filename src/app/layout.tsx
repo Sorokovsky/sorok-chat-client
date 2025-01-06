@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import React, {FC, JSX, ReactNode} from "react";
 import "@/styles/global.sass"
-import {Provider} from "@/components/provider";
-import {Header} from "@/components/header/header";
+import { MainLayout } from '@/components/layouts/main-layout/main-layout';
 
 export const metadata: Metadata = {
   title: {
@@ -13,17 +12,6 @@ export const metadata: Metadata = {
 };
 
 const RootLayout: FC<Readonly<{children: ReactNode;}>> = ({children}): JSX.Element => {
-  return (
-      <html className={"h-full"} lang={"en"} suppressHydrationWarning>
-      <body className={"h-full flex flex-col"}>
-          <Provider>
-              <Header />
-              <div className={"flex-grow"}>
-                  {children}
-              </div>
-          </Provider>
-      </body>
-      </html>
-  );
+  return <MainLayout>{children}</MainLayout>;
 }
 export default RootLayout;
