@@ -11,7 +11,7 @@ import {
 import cn from "clsx";
 import styles from "./image-input.module.sass";
 import Image from "next/image";
-import {useFileToSrc} from "@/hooks/use-file-to.src";
+import {fileToSrc} from "@/utils/use-file-to-src";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
     label: string;
@@ -20,7 +20,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 export const ImageInput: FC<Props> = ({className, label, ...rest}: Props): JSX.Element => {
     const input = useRef<HTMLInputElement>(null);
     const [file, setFile] = useState<File | null>(null);
-    const src: string = useFileToSrc(file);
+    const src: string = fileToSrc(file);
     const onChange: ChangeEventHandler<HTMLInputElement> = (event: ChangeEvent<HTMLInputElement>) => {
         const {target} = event;
         setFile(target.files?.[0] || null);

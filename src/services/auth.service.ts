@@ -5,6 +5,7 @@ import {type Register} from "@/types/models/auth/register.type";
 import {type GetUser} from "@/types/models/users/get-user.type";
 import toast from "react-hot-toast";
 import {SUCCESS_LOGIN, SUCCESS_LOGOUT, SUCCESS_REGISTER} from "@/constants/messages.constant";
+import { CONTENT_TYPE_HEADER_KEY, CONTENT_TYPE_FORMDATA_VALUE } from '../contracts/constants/common.constant';
 
 class AuthService {
     private readonly baseUrl: string = '/auth';
@@ -18,7 +19,11 @@ class AuthService {
     }
 
     public async register(register: Register): Promise<GetUser> {
-        const response: AxiosResponse<GetUser> = await api.post(this.registerUrl, register);
+        const response: AxiosResponse<GetUser> = await api.post(this.registerUrl, register, {
+            headers: {
+                [CONTENT_TYPE_HEADER_KEY]: CONTENT_TYPE_FORMDATA_VALUE
+            }
+        });
         if(response) toast.success(SUCCESS_REGISTER)
         return response.data;
     }

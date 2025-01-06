@@ -10,3 +10,5 @@ export const REFETCH_INTERVAL: number = 1000 * 10;
 export const ICON_SIZE: number = 25;
 export const DEFAULT_ICON_COLOR: string = "white";
 export const NOTIFICATION_DURATION_MILLISECONDS: number = 1000;
+export const CONTENT_TYPE_HEADER_KEY: string = "Content-Type";
+export const CONTENT_TYPE_FORMDATA_VALUE: string = "multipart/form-data";

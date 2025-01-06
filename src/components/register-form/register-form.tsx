@@ -1,4 +1,4 @@
-import {type FC, type JSX} from "react";
+import {useRef, type FC, type JSX} from "react";
 import {Form} from "@/ui/form/form";
 import {useForm} from "react-hook-form";
 import {type CreateUser} from "@/types/models/users/create-user.type";
@@ -10,13 +10,24 @@ import {ImageInput} from "@/ui/image-input/image-input";
 
 export const RegisterForm: FC = (): JSX.Element => {
     const { handleSubmit, register } = useForm<CreateUser>();
+    const ref = useRef<HTMLFormElement>(null);
     const { mutate } = useRegister();
     const registerHandler: (data: CreateUser) => void = (data: CreateUser) => {
+        const { current: form } = ref;
+        const formData = new FormData(form!);
+        formData.forEach((value, key) => {
+            //@ts-ignore
+            data[key] = value;
+            
+        });        
         mutate(data);
     }
     return (
         <>
-            <Form onSubmit={handleSubmit(registerHandler)}>
+            <Form
+                ref={ref}
+                onSubmit={handleSubmit(registerHandler)}
+            >
                 <Heading tag={"h1"} >Register form</Heading>
                 <Input
                 label={"Enter email"}

@@ -1,8 +1,10 @@
-import {type FC, type FormHTMLAttributes, type JSX} from "react";
+import { type FC, type FormHTMLAttributes, type JSX, type RefObject } from 'react';
 import cn from "clsx";
 import styles from "./form.module.sass";
 
-type Props = FormHTMLAttributes<HTMLFormElement>;
+interface Props extends FormHTMLAttributes<HTMLFormElement> {
+    ref?: RefObject<HTMLFormElement | null>; 
+}
 
 export const Form: FC<Props> = ({className, children, ...rest}: Props): JSX.Element => {
     return (
