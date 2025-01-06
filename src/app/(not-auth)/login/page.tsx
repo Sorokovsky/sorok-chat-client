@@ -1,25 +1,12 @@
-"use client"
-import {type NextPage} from "next";
-import {type JSX, useEffect, useState} from "react";
-import {useIsAuth} from "@/hooks/use-is-auth.hook";
-import {useRouter} from "next/navigation";
-import {type AppRouterInstance} from "next/dist/shared/lib/app-router-context.shared-runtime";
-import {Loader} from "@/ui/loader/loader";
-import {LoginForm} from "@/components/login-form/login-form";
-const LoginPage: NextPage = (): JSX.Element => {
-    const {isAuth, isPending: isFetch} = useIsAuth();
-    const router: AppRouterInstance = useRouter();
-    const [isLoading, setIsLoading] = useState(false);
-    useEffect(() => {
-       if(isAuth) router.back();
-    }, [isAuth]);
-    useEffect(() => {
-        setIsLoading(isFetch)
-    }, [isFetch]);
-    return (
-        <div className={"center"}>
-            {isLoading ? <Loader /> : <LoginForm />}
-        </div>
-    );
+import { LoginPage } from "@/components/pages/login/login";
+import {type Metadata, type NextPage} from "next";
+import { type JSX } from "react";
+
+export const metadata: Metadata = {
+    title: "Login"
 }
-export default LoginPage;
+
+const Login: NextPage = (): JSX.Element => {
+    return <LoginPage />
+}
+export default Login;

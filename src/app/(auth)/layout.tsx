@@ -1,3 +1,4 @@
+"use client"
 import { type PropsWithChildren, type FC, type JSX } from "react";
 import { useForAuth } from '@/hooks/use-for-auth.hook';
 
