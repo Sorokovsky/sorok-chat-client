@@ -11,7 +11,7 @@ import {
 import cn from "clsx";
 import styles from "./image-input.module.sass";
 import Image from "next/image";
-import {fileToSrc} from "@/utils/use-file-to-src";
+import {fileToSrc} from "@/utils/file-to-src";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
     label: string;
