@@ -1,10 +1,14 @@
 import { pagesService } from "@/services/pages.service";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useIsAuth } from './use-is-auth.hook';
+import { useEffect } from 'react';
 
-export const useRedirectGuard = (needRedirect: boolean): void => {
+export const useRedirectGuard = (forAuth: boolean): void => {
+    const { isAuth } = useIsAuth();
     const router = useRouter();
-    useEffect(() => {
-        router.replace(pagesService.home);
-    }, [needRedirect])
+    useEffect(() => {        
+        if (isAuth !== forAuth) {
+            router.replace(pagesService.home);
+        }
+    }, [isAuth]);
 }
