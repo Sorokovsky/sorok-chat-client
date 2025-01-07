@@ -1,3 +1,4 @@
+import { pagesService } from '@/services/pages.service';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { useIsAuth } from './use-is-auth.hook';
@@ -6,7 +7,7 @@ export const useForAuth = () => {
     const router = useRouter();
     useEffect(() => {
         if (isAuth === false) {
-          router.back();
+          router.replace(pagesService.home);
         }
     }, [isAuth]);
 }
