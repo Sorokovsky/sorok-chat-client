@@ -8,7 +8,7 @@ export const LoginPage: FC = (): JSX.Element => {
     const {isPending: isFetch} = useIsAuth();
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
-        setIsLoading(isFetch)
+        setIsLoading(isFetch);
     }, [isFetch]);
     return (
         <div className={"center"}>

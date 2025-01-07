@@ -10,10 +10,7 @@ export const RegisterPage: FC = (): JSX.Element => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
-        if(isAuth) router.back();
-    }, [isAuth]);
-    useEffect(() => {
-        setIsLoading(isFetch)
+        setIsLoading(isFetch);
     }, [isFetch]);
     return (
         <div className={"center"}>
