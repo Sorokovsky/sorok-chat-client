@@ -12,8 +12,8 @@ export const Header: FC = (): JSX.Element => {
         <header
             className={cn(styles.header)}
         >
-            <CurrentUserAvatar />
-            <Logo onClick={toggle} />
+            <Logo />
+            <CurrentUserAvatar onClick={toggle} />
         </header>
     );
 }
