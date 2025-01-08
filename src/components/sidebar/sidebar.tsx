@@ -11,7 +11,6 @@ interface Props extends PropsWithChildren {
 
 export const Sidebar: FC<Props> = ({ position = 'left', children, isOpen }): JSX.Element => {
     return (
-
         <aside
             className={cn(styles.sidebar, styles[position], {
                 [styles.open]: isOpen
