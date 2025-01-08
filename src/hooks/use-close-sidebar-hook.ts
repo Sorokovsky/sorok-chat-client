@@ -4,8 +4,8 @@ export const useCloseSidebar = (close: () => void, content: RefObject<HTMLElemen
     const clickHandler = (event: MouseEvent) => {
         const target = event.target as HTMLElement;
         const sidebarClasses: string = content.current?.className
-            .replaceAll(/^sidebar/g, ".sidebar")
-            .replaceAll(" sidebar", ".sidebar") || "";
+            .replace(/^/g, ".")
+            .replaceAll(" ", ".") || "";
         const isInContent: boolean = target?.closest(sidebarClasses) !== null;
         const clikableElement = target.closest("a,button");
         const isLinkOrButton: boolean = clikableElement !== null;        
