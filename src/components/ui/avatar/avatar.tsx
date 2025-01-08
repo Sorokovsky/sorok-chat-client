@@ -9,9 +9,10 @@ interface Props {
     avatarPath?: string,
     size?: number,
     onClick?: MouseEventHandler<HTMLButtonElement>,
+    fromServer?: boolean
 }
 
-export const Avatar: FC<Props> = ({avatarPath = "", size = DEFAULT_AVATAR_SIZE, onClick = (): void => {}}: Props): JSX.Element => {
+export const Avatar: FC<Props> = ({avatarPath = "", size = DEFAULT_AVATAR_SIZE, onClick = (): void => {}, fromServer = true}: Props): JSX.Element => {
     return (
       <button
           type={"button"}
@@ -19,7 +20,7 @@ export const Avatar: FC<Props> = ({avatarPath = "", size = DEFAULT_AVATAR_SIZE, 
           className={cn(styles.avatar)}
       >
           <Image
-              src={getAvatarPath(avatarPath)}
+              src={fromServer ? getAvatarPath(avatarPath) : avatarPath}
               width={size}
               height={size}
               style={{width: size, height: size}}

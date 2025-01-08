@@ -8,11 +8,11 @@ import { type FC, type PropsWithChildren, type JSX } from "react";
 export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => {
     const isOpen = useSettingsStore(state => state.isOpen);
     return (<html className={"h-full"} lang={"en"} suppressHydrationWarning>
-        <body className={"h-full flex flex-col"}>
+        <body className={"h-full flex flex-col overflow-x-hidden"}>
             <Provider>
                 <Header />
                 <div className={"flex-grow flex items-stretch relative"}>
-                    <Sidebar isOpen={isOpen}>sidebar</Sidebar>
+                    <Sidebar position="right" isOpen={isOpen}>sidebar</Sidebar>
                     <main
                         className="flex-grow"
                     >
