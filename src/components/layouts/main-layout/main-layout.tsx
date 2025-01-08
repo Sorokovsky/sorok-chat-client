@@ -6,7 +6,7 @@ import { useSettingsStore } from "@/store/settings/settings.store";
 import { type FC, type PropsWithChildren, type JSX } from "react";
 
 export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => {
-    const { isOpen } = useSettingsStore();
+    const isOpen = useSettingsStore(state => state.isOpen);
     return (<html className={"h-full"} lang={"en"} suppressHydrationWarning>
         <body className={"h-full flex flex-col"}>
             <Provider>

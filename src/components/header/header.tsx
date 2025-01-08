@@ -7,7 +7,7 @@ import {AuthMenu} from "@/components/auth-menu/auth-menu";
 import { useSettingsStore } from "@/store/settings/settings.store";
 
 export const Header: FC = (): JSX.Element => {
-    const { toggle } = useSettingsStore();
+    const toggle = useSettingsStore(state => state.toggle);
     return (
         <header
             className={cn(styles.header)}
