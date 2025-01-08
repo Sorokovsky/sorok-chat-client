@@ -14,16 +14,13 @@ export const useMutation = <T, V>(
     refreshKeys: QueryKeys[] = []
 ): MutationResult => {
     const client: QueryClient = useQueryClient();
-    const globalCache: QueryCache = client.getQueryCache();
-    const cache = globalCache.find({queryKey: refreshKeys, exact: false});
     const { mutate, isPending, isSuccess, isError, error } = useMutationFetch({
         mutationKey: keys,
-        mutationFn: callback as MutateFunction,
+        mutationFn: callback as unknown as MutateFunction,
         retry: RETRIES_FETCH_COUNT,
 
         onSuccess: () => {
-            cache?.reset();
-            client.invalidateQueries({queryKey: refreshKeys});
+            client.resetQueries({queryKey: refreshKeys});
         }
     });
     return {mutate, isPending, isSuccess, isError, error} as MutationResult
