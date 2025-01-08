@@ -1,5 +1,6 @@
 "use client"
 import { Header } from "@/components/header/header";
+import { MainMenu } from "@/components/main-menu/main-menu";
 import { Provider } from "@/components/provider";
 import { Sidebar } from "@/components/sidebar/sidebar";
 import { useSettingsStore } from "@/store/settings/settings.store";
@@ -12,7 +13,7 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => 
             <Provider>
                 <Header />
                 <div className={"flex-grow flex items-stretch relative"}>
-                    <Sidebar position="right" isOpen={isOpen}>sidebar</Sidebar>
+                    <Sidebar position="right" isOpen={isOpen}><MainMenu /></Sidebar>
                     <main
                         className="flex-grow"
                     >
