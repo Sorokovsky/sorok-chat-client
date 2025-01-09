@@ -21,7 +21,7 @@ export const useMutation = <T, V>(
         mutationFn: callback as unknown as MutateFunction,
         retry: RETRIES_FETCH_COUNT,
         onSuccess: () => {
-            toast.success(successMessage);
+            if (successMessage !== "") toast.success(successMessage);
         },
         onSettled: () => {
             client.resetQueries({ queryKey: refreshKeys });
