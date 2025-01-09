@@ -25,6 +25,7 @@ export const useMutation = <T, V>(
         },
         onSettled: () => {
             client.resetQueries({ queryKey: refreshKeys });
+            client.invalidateQueries({ queryKey: refreshKeys });
         },
         onError: (error: ApiError) => {            
             toast.error(error.message);

@@ -10,7 +10,7 @@ export const Provider: FC<PropsWithChildren> = ({ children }: PropsWithChildren)
         queryCache: new QueryCache({
             onError(error) {
                 toast.error(error.message);
-            }
+            },
         }),
         defaultOptions: {
             queries: {
