@@ -4,6 +4,7 @@ export const AUTH_HEADER_KEY: string = 'Authorization';
 export const API_URL: string = "/api";
 export const FILES_PREFIX: string = "/files";
 export const DEFAULT_AVATAR: string = "/avatar.svg";
+export const DEFAULT_LOGO: string = "/logo.svg";
 export const DEFAULT_AVATAR_SIZE: number = 50;
 export const RETRIES_FETCH_COUNT: number = 0;
 export const REFETCH_INTERVAL: number = 1000 * 10;
