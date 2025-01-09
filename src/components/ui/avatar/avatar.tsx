@@ -6,18 +6,20 @@ import cn from "clsx";
 import {DEFAULT_AVATAR_SIZE} from "@/constants/common.constant";
 
 interface Props {
-    avatarPath?: string,
-    size?: number,
-    onClick?: MouseEventHandler<HTMLButtonElement>,
-    fromServer?: boolean
+    avatarPath?: string;
+    size?: number;
+    onClick?: MouseEventHandler<HTMLButtonElement>;
+    fromServer?: boolean;
+    id?: string;
 }
 
-export const Avatar: FC<Props> = ({avatarPath = "", size = DEFAULT_AVATAR_SIZE, onClick = (): void => {}, fromServer = true}: Props): JSX.Element => {
+export const Avatar: FC<Props> = ({avatarPath = "", size = DEFAULT_AVATAR_SIZE, onClick = (): void => {}, fromServer = true, id}: Props): JSX.Element => {
     return (
       <button
-          type={"button"}
-          onClick={onClick}
-          className={cn(styles.avatar)}
+            type={"button"}
+            onClick={onClick}
+            className={cn(styles.avatar)}
+            id={id}
       >
           <Image
               src={fromServer ? getAvatarPath(avatarPath) : avatarPath}

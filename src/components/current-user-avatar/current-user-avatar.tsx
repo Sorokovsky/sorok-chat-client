@@ -6,13 +6,14 @@ import {Loader} from "@/ui/loader/loader";
 
 interface Props {
     onClick?: MouseEventHandler<HTMLButtonElement>;
+    id?: string;
 }
 
-export const CurrentUserAvatar: FC<Props> = ({onClick = () => {}}): JSX.Element => {
+export const CurrentUserAvatar: FC<Props> = ({onClick = () => {}, id}): JSX.Element => {
     const {data, isPending} = useProfile();
     return (
         <>
-            {isPending ? <Loader /> : <Avatar avatarPath={data?.avatarPath} onClick={onClick} />}
+            {isPending ? <Loader /> : <Avatar avatarPath={data?.avatarPath} onClick={onClick} id={id} />}
         </>
     )
 }

@@ -9,13 +9,15 @@ export const useCloseSidebar = (close: () => void, content: RefObject<HTMLElemen
         const isInContent: boolean = target?.closest(sidebarClasses) !== null;
         const clikableElement = target.closest("a,button");
         const isLinkOrButton: boolean = clikableElement !== null;        
-        const isCloser: boolean = target.closest(closerSelector) !== null;        
+        const isCloser: boolean = target.closest(closerSelector) !== null; 
         if ((isInContent === false || isLinkOrButton) && isCloser === false) {
             close();
         }
     };
     useEffect(() => {
-        document.body.addEventListener('click', clickHandler);
-        return () => document.body.removeEventListener('click', clickHandler);
+        if (content.current !== null && closerSelector !== "") {
+            document.body.addEventListener('click', clickHandler);
+            return () => document.body.removeEventListener('click', clickHandler);
+        }
     }, [content]);
 }

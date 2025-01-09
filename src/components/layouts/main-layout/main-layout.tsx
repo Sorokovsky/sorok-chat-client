@@ -15,18 +15,24 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => 
                 <Provider>
                     <Header />
                     <div className={"flex-grow flex items-stretch relative z-1"}>
-                        <Sidebar
-                            position="right"
-                            isOpen={isOpen}
-                            close={close}
-                            closerSelector="[class^='avatar-']"
-                        >
-                            <MainMenu />
-                        </Sidebar>
                         <main
                             className="flex-grow"
                         >
+                            <Sidebar
+                                position="left"
+                                isOpen={true}
+                            >
+                            <MainMenu />
+                        </Sidebar>
                             {children}
+                            <Sidebar
+                                position="right"
+                                isOpen={isOpen}
+                                close={close}
+                                closerSelector="#avatar"
+                            >
+                            <MainMenu />
+                        </Sidebar>
                         </main>
                     </div>
                 </Provider>
