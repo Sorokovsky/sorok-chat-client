@@ -5,14 +5,20 @@ import styles from "@/components/header/header.module.sass"
 import { CurrentUserAvatar } from "@/components/current-user-avatar/current-user-avatar";
 import { Logo } from "@/components/logo/logo";
 import { useSettingsStore } from '@/store/settings/settings.store';
+import { useRouter } from "next/navigation";
+import { pagesService } from '@/services/pages.service';
 
 export const Header: FC = (): JSX.Element => {
     const toggle = useSettingsStore(state => state.toggle);
+    const router = useRouter();
+    const redirectToHome = () => {
+        router.push(pagesService.home);
+    };
     return (
         <header
             className={cn(styles.header)}
         >
-            <Logo />
+            <Logo onClick={redirectToHome} />
             <CurrentUserAvatar onClick={toggle} id={"avatar"} />
         </header>
     );
