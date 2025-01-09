@@ -10,16 +10,17 @@ interface Props extends PropsWithChildren {
     isOpen: boolean;
     close?: () => void;
     closerSelector?: string;
+    className?: string;
 }
 
-export const Sidebar: FC<Props> = ({ position = 'left', children, isOpen, close = () => { }, closerSelector = ""}): JSX.Element => {
+export const Sidebar: FC<Props> = ({ position = 'left', children, isOpen, close = () => { }, closerSelector = "", className = ""}): JSX.Element => {
     const ref = useRef<HTMLElement | null>(null);
     useCloseSidebar(close, ref, closerSelector);
     return (
         <aside
             className={cn(styles.sidebar, styles[position], {
                 [styles.open]: isOpen
-            })}
+            }, className)}
             ref={ref}
         >
             {children}
