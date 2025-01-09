@@ -1,4 +1,5 @@
 "use client"
+import { Chats } from "@/components/chats/chats";
 import { Header } from "@/components/header/header";
 import { MainMenu } from "@/components/main-menu/main-menu";
 import { Provider } from "@/components/provider";
@@ -22,7 +23,7 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => 
                                 position="left"
                                 isOpen={true}
                             >
-                            <MainMenu />
+                            <Chats />
                         </Sidebar>
                             {children}
                             <Sidebar
