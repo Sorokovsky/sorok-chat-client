@@ -1,6 +1,6 @@
 import { type MouseEventHandler, type FC, type JSX } from "react";
 import { Avatar } from "@/ui/avatar/avatar";
-import { useIsAuth } from '../../hooks/use-is-auth.hook';
+import { useIsAuth } from '@/hooks/use-is-auth.hook';
 import { Loader } from '@/ui/loader/loader';
 import { DEFAULT_LOGO } from "@/constants/common.constant";
 
