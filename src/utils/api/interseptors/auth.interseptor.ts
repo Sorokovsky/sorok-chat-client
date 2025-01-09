@@ -2,7 +2,6 @@ import {type AxiosError, type AxiosResponse, type InternalAxiosRequestConfig} fr
 import { accessTokenStorageService } from "@/services/access-token-storage.service";
 import {AUTH_HEADER_KEY, BEARER_PREFIX} from "@/constants/common.constant";
 import {isBearerAuth} from "@/utils/is-bearer-auth";
-import toast from "react-hot-toast";
 import {type ApiError} from "@/types/api-error.type";
 
 export const onRequest = (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
@@ -24,5 +23,5 @@ export const onResponse = (response: AxiosResponse): AxiosResponse => {
 };
 
 export const onError = (error: AxiosError<ApiError>) => {
-    toast.error(error.response?.data?.message);
+    throw error.response?.data;
 }

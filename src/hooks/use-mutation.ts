@@ -1,6 +1,5 @@
 import {
     type MutateFunction,
-    type QueryCache,
     type QueryClient,
     useMutation as useMutationFetch,
     useQueryClient
@@ -8,10 +7,13 @@ import {
 import {QueryKeys} from "@/enums/query-keys.enum";
 import {type MutationResult} from "@/types/mutation-result.type";
 import {RETRIES_FETCH_COUNT} from "@/constants/common.constant";
+import { ApiError } from "@/types/api-error.type";
+import toast from "react-hot-toast";
 export const useMutation = <T, V>(
     keys: QueryKeys[],
     callback: V,
-    refreshKeys: QueryKeys[] = []
+    refreshKeys: QueryKeys[] = [],
+    successMessage: string = ""
 ): MutationResult => {
     const client: QueryClient = useQueryClient();
     const { mutate, isPending, isSuccess, isError, error } = useMutationFetch({
@@ -19,8 +21,14 @@ export const useMutation = <T, V>(
         mutationFn: callback as unknown as MutateFunction,
         retry: RETRIES_FETCH_COUNT,
         onSuccess: () => {
-            client.resetQueries({queryKey: refreshKeys});
+            toast.success(successMessage);
+        },
+        onSettled: () => {
+            client.resetQueries({ queryKey: refreshKeys });
+        },
+        onError: (error: ApiError) => {            
+            toast.error(error.message);
         }
     });
-    return {mutate, isPending, isSuccess, isError, error} as MutationResult
+    return { mutate, isPending, isSuccess, isError, error } as unknown as MutationResult
 }
