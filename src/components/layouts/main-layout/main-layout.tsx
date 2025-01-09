@@ -23,8 +23,8 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => 
                                 position="left"
                                 isOpen={true}
                             >
-                            <Chats />
-                        </Sidebar>
+                                <Chats />
+                            </Sidebar>
                             {children}
                             <Sidebar
                                 position="right"
@@ -32,8 +32,8 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => 
                                 close={close}
                                 closerSelector="#avatar"
                             >
-                            <MainMenu />
-                        </Sidebar>
+                                <MainMenu />
+                            </Sidebar>
                         </main>
                     </div>
                 </Provider>
