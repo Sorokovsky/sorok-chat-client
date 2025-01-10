@@ -1,4 +1,4 @@
-import { LOGO_URL } from "@/constants/images.constants";
+import { ICON_SIZES, ICON_URL } from "@/constants/images.constants";
 import { DESCRIPTION, NAME } from "@/constants/seo.constants";
 import { pagesService } from "@/services/pages.service";
 import type { MetadataRoute } from "next";
@@ -14,8 +14,9 @@ export default function manifest(): MetadataRoute.Manifest {
         display: "fullscreen",
         icons: [
             {
-                src: LOGO_URL,
-                type: "image/svg",
+                src: ICON_URL,
+                type: "image/png",
+                sizes: ICON_SIZES,
             }
         ],
     };
