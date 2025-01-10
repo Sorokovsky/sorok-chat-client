@@ -1,9 +1,12 @@
-export default function Home() {
+import type { NextPage } from "next";
+import type { JSX } from "react";
+
+const Home: NextPage = (): JSX.Element => {
   return (
-    <div>
-      <main>
-        
-      </main>
-    </div>
+    <main>
+      test
+    </main>
   );
 }
+
+export default Home;

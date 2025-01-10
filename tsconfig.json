@@ -11,6 +11,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
@@ -19,7 +20,14 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/styles/*": ["./src/styles/*"],
+      "@/constants/*": ["./src/contracts/constants/*"],
+      "@/types/*": ["./src/contracts/types/*"],
+      "@/enums/*": ["./src/contracts/enums/*"],
+      "@/ui/*": ["./src/components/ui/*"],
+      "@/pages/*": ["./src/components/pages/*"],
+      "@/commons/*": ["./src/components/common/*"],
+      "@/layouts/*": ["./src/components/layouts/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
