@@ -30,6 +30,7 @@ export const Avatar: FC<Props> = ({
                 width={size}
                 height={size}
                 alt={alt}
+                priority
             />
         </button>
     );

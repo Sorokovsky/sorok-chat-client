@@ -1,7 +1,7 @@
 import type { FC, JSX } from "react";
 import cn from "clsx";
 import styles from "./header.module.sass";
-import { LOGO } from "@/constants/images.constants";
+import { AVATAR, LOGO } from "@/constants/images.constants";
 import { Avatar } from "@/ui/avatar/avatar";
 
 export const Header: FC = (): JSX.Element => {
@@ -11,6 +11,9 @@ export const Header: FC = (): JSX.Element => {
         >
             <Avatar
                 imageOrPath={LOGO}
+            />
+            <Avatar
+                imageOrPath={AVATAR}
             />
         </header>
     );
