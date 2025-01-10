@@ -27,7 +27,9 @@
       "@/ui/*": ["./src/components/ui/*"],
       "@/pages/*": ["./src/components/pages/*"],
       "@/commons/*": ["./src/components/common/*"],
-      "@/layouts/*": ["./src/components/layouts/*"]
+      "@/layouts/*": ["./src/components/layouts/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/images/*": ["./public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

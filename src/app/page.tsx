@@ -1,12 +1,12 @@
-import type { NextPage } from "next";
+import { HOME_TITLE } from "@/constants/seo.constants";
+import { HomePage } from "@/pages/home/home";
+import type { Metadata, NextPage } from "next";
 import type { JSX } from "react";
 
-const Home: NextPage = (): JSX.Element => {
-  return (
-    <main>
-      test
-    </main>
-  );
-}
+export const metadata: Metadata = {
+  title: HOME_TITLE
+};
+
+const Home: NextPage = (): JSX.Element => <HomePage />;
 
 export default Home;
