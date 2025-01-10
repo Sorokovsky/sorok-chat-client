@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { FC, JSX, MouseEventHandler } from "react";
 import cn from "clsx";
 import styles from "./avatar.module.sass";
+import { getAvatar } from "@/utils/get-avatar.util";
 
 interface Props {
     fromServer?: boolean;
@@ -26,7 +27,7 @@ export const Avatar: FC<Props> = ({
             className={cn(styles.avatar)}
         >
             <Image
-                src={imageOrPath}
+                src={getAvatar(imageOrPath, fromServer)}
                 width={size}
                 height={size}
                 alt={alt}
