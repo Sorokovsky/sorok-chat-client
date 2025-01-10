@@ -1,1 +1,0 @@
-export const FILES_PREFIXX: string = "/files";

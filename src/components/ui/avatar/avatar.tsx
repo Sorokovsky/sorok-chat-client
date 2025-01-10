@@ -23,6 +23,10 @@ export const Avatar: FC<Props> = ({
     return (
         <button
             type="button"
+            style={{
+                width: size,
+                height: size,
+            }}
             onClick={onClick}
             className={cn(styles.avatar)}
         >

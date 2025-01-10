@@ -1,17 +1,16 @@
 import type { FC, JSX } from "react";
 import cn from "clsx";
 import styles from "./header.module.sass";
-import { AVATAR, LOGO } from "@/constants/images.constants";
+import { AVATAR } from "@/constants/images.constants";
 import { Avatar } from "@/ui/avatar/avatar";
+import { Logo } from "@/commons/logo/logo";
 
 export const Header: FC = (): JSX.Element => {
     return (
         <header
             className={cn(styles.header)}
         >
-            <Avatar
-                imageOrPath={LOGO}
-            />
+            <Logo />
             <Avatar
                 imageOrPath={AVATAR}
             />
