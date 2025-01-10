@@ -1,6 +1,6 @@
-import {type FC, type JSX, useEffect} from "react";
-import {Input} from "@/ui/input/input";
-import {Button} from "@/ui/button/button";
+import {type FC, type JSX} from "react";
+import {Input} from "@/ui/form/input/input";
+import {Button} from "@/components/ui/form/button/button";
 import {Form} from "@/ui/form/form";
 import {useForm} from "react-hook-form";
 import {type LoginUser} from "@/types/models/auth/login.type";

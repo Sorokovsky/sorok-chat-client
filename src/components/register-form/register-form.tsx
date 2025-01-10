@@ -4,9 +4,9 @@ import {useForm} from "react-hook-form";
 import {type CreateUser} from "@/types/models/users/create-user.type";
 import {useRegister} from "@/hooks/use-register.hook";
 import {Heading} from "@/ui/heading/heading";
-import {Button} from "@/ui/button/button";
-import {Input} from "@/ui/input/input";
-import {ImageInput} from "@/ui/image-input/image-input";
+import {Button} from "@/components/ui/form/button/button";
+import {Input} from "@/ui/form/input/input";
+import {ImageInput} from "@/ui/form/image-input/image-input";
 
 export const RegisterForm: FC = (): JSX.Element => {
     const { handleSubmit, register } = useForm<CreateUser>();
