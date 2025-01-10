@@ -1,7 +1,6 @@
-import { API_PREFIX, FILES_PREFIX } from "@/constants/api.constants";
 import type { NextConfig } from "next";
-import { EnviromentKeys } from './src/contracts/enums/enviroment-keys.enum';
-import { SERVER_PREFIX } from './src/contracts/constants/api.constants';
+import { EnviromentKeys } from '@/enums/enviroment-keys.enum';
+import { SERVER_PREFIX } from '@/constants/api.constants';
 
 const protocol: string = process.env[EnviromentKeys.API_PROTOKOL] || "";
 const port: string = (process.env[EnviromentKeys.API_PORT] || "5000");
