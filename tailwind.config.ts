@@ -10,6 +10,9 @@ const config: Config = {
     extend: {
       animation: {
         loader: "spin .8s linear infinite",
+      },
+      transitionDuration: {
+        default: ".500s"
       }
     },
   },

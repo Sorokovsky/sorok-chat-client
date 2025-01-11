@@ -1,16 +1,20 @@
 "use client"
 import { Avatar } from "@/ui/avatar/avatar";
-import type { FC, JSX } from "react";
+import type { FC, JSX, MouseEventHandler } from "react";
 import { LOGO } from "@/constants/images.constants";
 import { useRouter } from "next/navigation";
 import { pagesService } from "@/services/pages.service";
 
-export const Logo: FC = (): JSX.Element => {
+interface Props {
+    onClick?: MouseEventHandler
+}
+
+export const Logo: FC<Props> = ({onClick}): JSX.Element => {
     const router = useRouter();
     const clickHandler = () => {
         router.push(pagesService.home);
     };
     return (
-        <Avatar imageOrPath={LOGO} onClick={clickHandler} />
+        <Avatar imageOrPath={LOGO} onClick={onClick || clickHandler} />
     );
 }

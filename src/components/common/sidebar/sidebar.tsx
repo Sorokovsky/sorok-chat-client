@@ -13,7 +13,9 @@ interface Props {
 export const Sidebar: FC<Props> = ({position, state, className = ""}): JSX.Element => {
     return (
         <aside
-            className={cn(styles.sidebar, className, styles[position])}
+            className={cn(styles.sidebar, className, styles[position], {
+                [styles.open]: state.isOpen
+            })}
         >
 
         </aside>
