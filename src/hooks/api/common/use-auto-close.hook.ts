@@ -17,6 +17,7 @@ export const useAutoClose = (ref: RefObject<HTMLElement | null>, state: SidebarS
         }
     };
     useEffect(() => {
-        document.body.addEventListener("click", clickHandler, {capture: false});
-    }), [ref, state];
+        //document.body.addEventListener("click", clickHandler);
+        //return () => document.removeEventListener("click", clickHandler);
+    }), [];
 };
