@@ -12,13 +12,15 @@ interface Props {
     onClick?: MouseEventHandler;
     alt?: string;
     size?: number;
+    id?: string;
 };
 export const Avatar: FC<Props> = ({
     imageOrPath,
     onClick,
     fromServer = true,
     alt = "avatar",
-    size = AVATAR_SIZE
+    size = AVATAR_SIZE,
+    id
 }): JSX.Element => {
     return (
         <button
@@ -29,6 +31,7 @@ export const Avatar: FC<Props> = ({
             }}
             onClick={onClick}
             className={cn(styles.avatar)}
+            id={id}
         >
             <Image
                 src={getAvatar(imageOrPath, fromServer)}

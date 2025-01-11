@@ -6,15 +6,16 @@ import { useRouter } from "next/navigation";
 import { pagesService } from "@/services/pages.service";
 
 interface Props {
-    onClick?: MouseEventHandler
+    onClick?: MouseEventHandler;
+    id?: string;
 }
 
-export const Logo: FC<Props> = ({onClick}): JSX.Element => {
+export const Logo: FC<Props> = ({onClick, id}): JSX.Element => {
     const router = useRouter();
     const clickHandler = () => {
         router.push(pagesService.home);
     };
     return (
-        <Avatar imageOrPath={LOGO} onClick={onClick || clickHandler} />
+        <Avatar imageOrPath={LOGO} onClick={onClick || clickHandler} id={id} />
     );
 }

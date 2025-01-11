@@ -7,9 +7,10 @@ import { Loader } from '@/ui/loader/loader';
 
 interface Props {
     onClick?: MouseEventHandler;
+    id?: string;
 }
 
-export const CurrentUserAvatar: FC<Props> = ({ onClick }): JSX.Element => {
+export const CurrentUserAvatar: FC<Props> = ({ onClick, id }): JSX.Element => {
     const { data, isLoading } = useProfile();
     return (
         <>
@@ -20,6 +21,7 @@ export const CurrentUserAvatar: FC<Props> = ({ onClick }): JSX.Element => {
                     :
                     <Avatar
                         onClick={onClick}
+                        id={id}
                         imageOrPath={data?.avatarPath || AVATAR}
                     />
             }

@@ -13,8 +13,8 @@ export const Header: FC = (): JSX.Element => {
         <header
             className={cn(styles.header)}
         >
-            <Logo onClick={toggleChannels} />
-            <CurrentUserAvatar onClick={toggleSettings} />
+            <Logo id="logo" onClick={toggleChannels} />
+            <CurrentUserAvatar id="avatar" onClick={toggleSettings} />
         </header>
     );
 };

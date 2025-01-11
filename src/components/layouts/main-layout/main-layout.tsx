@@ -19,9 +19,9 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => 
                     <div
                         className={cn(styles.content)}
                     >
-                        <Sidebar position="left" state={channelsSidebarState} />
+                        <Sidebar position="left" state={channelsSidebarState}><button>test</button></Sidebar>
                         <main>{children}</main>
-                        <Sidebar position="right" state={settingSidebarState} />
+                        <Sidebar position="right" state={settingSidebarState}><button>test</button></Sidebar>
                     </div>
                 </GlobalProvider>
             </body>
