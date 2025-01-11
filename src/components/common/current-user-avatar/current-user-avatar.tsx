@@ -14,7 +14,10 @@ export const CurrentUserAvatar: FC<Props> = ({ onClick }): JSX.Element => {
     return (
         <>
             {
-                isLoading ? <Loader /> :
+                isLoading
+                    ?
+                    <Loader />
+                    :
                     <Avatar
                         onClick={onClick}
                         imageOrPath={data?.avatarPath || AVATAR}
