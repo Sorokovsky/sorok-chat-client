@@ -1,15 +1,15 @@
-import { SERVER_PREFIX } from "@/constants/api.constants";
+import { FILE_PREFIX } from "@/constants/api.constants";
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export const getAvatar = (
   pathOrImage: string | StaticImport,
   fromServer: boolean = true
 ): string | StaticImport => {
-  if (isImage(pathOrImage)) {
+  if (isImage(pathOrImage) || pathOrImage === "") {
     return pathOrImage;
   } else {
     const filePath: string = `/${pathOrImage.replaceAll("\\", "/")}`;
-    const path: string = fromServer ? `${SERVER_PREFIX}${filePath}` : filePath;
+    const path: string = fromServer ? `${FILE_PREFIX}${filePath}` : filePath;
     return path;
   }
 };

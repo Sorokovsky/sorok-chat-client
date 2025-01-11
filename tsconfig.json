@@ -32,6 +32,7 @@
       "@/images/*": ["./public/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/utils/*": ["./src/utils/*"],
+      "@/providers/*": ["./src/components/providers/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
