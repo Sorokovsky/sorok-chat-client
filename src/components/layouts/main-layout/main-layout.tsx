@@ -9,8 +9,8 @@ import styles from "./main-layout.module.sass";
 import { useChannelsSidebar } from '@/store/channels-settings/store';
 
 export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => {
-    const settingSidebarState = useUserSettings();
-    const channelsSidebarState = useChannelsSidebar();
+    const settingIsOpen = useUserSettings(state => state.isOpen);
+    const channelsIsOpen = useChannelsSidebar(state => state.isOpen);
     return (
         <html lang="uk" suppressHydrationWarning>
             <body>
@@ -19,9 +19,9 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => 
                     <div
                         className={cn(styles.content)}
                     >
-                        <Sidebar position="left" state={channelsSidebarState}><button>test</button></Sidebar>
+                        <Sidebar position="left" isOpen={channelsIsOpen}><button>test</button></Sidebar>
                         <main>{children}</main>
-                        <Sidebar position="right" state={settingSidebarState}><button>test</button></Sidebar>
+                        <Sidebar position="right" isOpen={settingIsOpen}><button>test</button></Sidebar>
                     </div>
                 </GlobalProvider>
             </body>

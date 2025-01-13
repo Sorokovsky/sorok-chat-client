@@ -6,15 +6,15 @@ import styles from "./sidebar.module.sass";
 
 interface Props extends PropsWithChildren {
     position: "left" | "right";
-    state: SidebarSetting;
+    isOpen: boolean;
     className?: string;
 }
 
-export const Sidebar: FC<Props> = ({ position, state, className = "", children }): JSX.Element => {
+export const Sidebar: FC<Props> = ({ position, isOpen, className = "", children }): JSX.Element => {
     return (
         <aside
             className={cn(styles.sidebar, className, styles[position], {
-                [styles.open]: state.isOpen
+                [styles.open]: isOpen
             })}
         >
             {children}
