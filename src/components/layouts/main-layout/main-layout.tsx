@@ -26,6 +26,5 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => 
                 </GlobalProvider>
             </body>
         </html>
-        
     );
 };
