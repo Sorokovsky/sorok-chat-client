@@ -6,5 +6,6 @@ export const useChannelsSidebar = create<SidebarSetting>((set, get) => {
     return {
         ...getSidebarInitial(set, get),
         closerSelector: "#logo",
+        isOpen: true
     }
 });

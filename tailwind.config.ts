@@ -12,7 +12,7 @@ const config: Config = {
                 loader: "spin .8s linear infinite",
             },
             transitionDuration: {
-                default: ".500s"
+                default: ".800s"
             }
         },
     },
