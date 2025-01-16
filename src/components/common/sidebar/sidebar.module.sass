@@ -1,11 +1,11 @@
 .sidebar
-  @apply border-0 min-w-[12%] h-full absolute z-0 duration-default
+  @apply border-0 w-[12%] h-full duration-default transition-all
   &.left
-    @apply border border-r-gray-300 -left-[100%]
+    @apply border border-r-gray-300 -ml-[12%]
     &.open
-      @apply left-0
+      @apply ml-0
 
   &.right
-    @apply border border-l-gray-300 -right-[100%]
+    @apply border border-l-gray-300 -mr-[12%]
     &.open
-      @apply right-0
+      @apply mr-0

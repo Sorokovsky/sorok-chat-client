@@ -1,0 +1,1 @@
+export const SUCCESS_LOGOUT: string = "Успішний вихід з облікового запису.";
