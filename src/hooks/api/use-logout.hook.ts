@@ -7,6 +7,6 @@ export const useLogout = () => {
     return useMutation(
         [QueryKeys.LOGOUT],
         () => authService.logout(),
-        SUCCESS_LOGOUT
+        SUCCESS_LOGOUT,
     );
 }
