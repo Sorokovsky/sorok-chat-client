@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="base link component">
-      <change afterPath="$PROJECT_DIR$/src/components/common/auth-menu/auth-menu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/menu/menu-item/menu-item.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/menu/menu-item/menu-item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/menu/menu.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/menu/menu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/constants/routes.constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/types/routes/menu-route.type.ts" afterDir="false" />
+    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="auth menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/link/link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/link/link.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contracts/constants/common.constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/constants/common.constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/pages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/pages.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737025987902</updated>
-      <workItem from="1737025999651" duration="4245000" />
+      <workItem from="1737025999651" duration="5778000" />
     </task>
     <task id="LOCAL-00001" summary="base link component">
       <option name="closed" value="true" />
@@ -94,7 +83,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737028495062</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="auth menu">
+      <option name="closed" value="true" />
+      <created>1737030697954</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737030697954</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,7 +102,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="reformat" />
     <MESSAGE value="base link component" />
-    <option name="LAST_COMMIT_MESSAGE" value="base link component" />
+    <MESSAGE value="auth menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth menu" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
