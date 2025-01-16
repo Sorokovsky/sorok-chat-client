@@ -8,6 +8,7 @@ import cn from "clsx";
 import styles from "./main-layout.module.sass";
 import {useChannelsSidebar} from '@/store/channels-settings/store';
 import {Link} from "@/ui/link/link";
+import {AuthMenu} from "@/commons/auth-menu/auth-menu";
 
 export const MainLayout: FC<PropsWithChildren> = ({children}): JSX.Element => {
     const settingIsOpen = useUserSettings(state => state.isOpen);
@@ -29,11 +30,7 @@ export const MainLayout: FC<PropsWithChildren> = ({children}): JSX.Element => {
                 </Sidebar>
                 <main>{children}</main>
                 <Sidebar position="right" isOpen={settingIsOpen}>
-                    <Link
-                        to={"/test"}
-                    >
-                        test
-                    </Link>
+                    <AuthMenu/>
                 </Sidebar>
             </div>
         </GlobalProvider>
