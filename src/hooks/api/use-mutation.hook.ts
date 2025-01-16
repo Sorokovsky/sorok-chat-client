@@ -17,12 +17,13 @@ export const useMutation = (
         onSuccess() {
             if (successMessage) {
                 toast.success(successMessage);
+                client.invalidateQueries({queryKey: refetchKeys});
+                client.resetQueries({queryKey: refetchKeys});
+                client.removeQueries({queryKey: refetchKeys});
             }
         },
         onError(error) {
             toast.error(error.message);
-            client.invalidateQueries({queryKey: refetchKeys});
-            client.resetQueries({queryKey: refetchKeys})
         }
     });
 }

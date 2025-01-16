@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="refactor routes">
-      <change afterPath="$PROJECT_DIR$/src/app/logout/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/logout/logout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/constants/messages.constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/api/use-logout.hook.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/api/use-mutation.hook.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/sidebar/sidebar.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/sidebar/sidebar.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/channels-settings/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/channels-settings/store.ts" afterDir="false" />
+    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="fix physics of sidebar">
+      <change beforePath="$PROJECT_DIR$/src/components/pages/logout/logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/logout/logout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737025987902</updated>
-      <workItem from="1737025999651" duration="16556000" />
+      <workItem from="1737025999651" duration="16874000" />
     </task>
     <task id="LOCAL-00001" summary="base link component">
       <option name="closed" value="true" />
@@ -138,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737049606574</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix physics of sidebar">
+      <option name="closed" value="true" />
+      <created>1737053793826</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737053793826</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +156,8 @@
     <MESSAGE value="notification" />
     <MESSAGE value="reformat" />
     <MESSAGE value="refactor routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor routes" />
+    <MESSAGE value="fix physics of sidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix physics of sidebar" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
