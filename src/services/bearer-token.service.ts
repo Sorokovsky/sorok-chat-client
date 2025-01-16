@@ -1,8 +1,8 @@
-import { ACCESS_TOKEN_KEY } from "@/constants/api.constants";
+import {ACCESS_TOKEN_KEY} from "@/constants/api.constants";
 
 class BearerTokenService {
     private readonly key: string;
-    
+
     constructor(key: string) {
         this.key = key;
     }

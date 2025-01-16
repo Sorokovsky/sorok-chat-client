@@ -1,4 +1,4 @@
-import type { HttpStatusCode } from "axios";
+import type {HttpStatusCode} from "axios";
 
 export type ApiError = {
     message: string;

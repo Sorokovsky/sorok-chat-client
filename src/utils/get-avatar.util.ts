@@ -1,21 +1,21 @@
-import { FILE_PREFIX } from "@/constants/api.constants";
-import type { StaticImport } from "next/dist/shared/lib/get-img-props";
+import {FILE_PREFIX} from "@/constants/api.constants";
+import type {StaticImport} from "next/dist/shared/lib/get-img-props";
 
 export const getAvatar = (
-  pathOrImage: string | StaticImport,
-  fromServer: boolean = true
+    pathOrImage: string | StaticImport,
+    fromServer: boolean = true
 ): string | StaticImport => {
-  if (isImage(pathOrImage) || pathOrImage === "") {
-    return pathOrImage;
-  } else {
-    const filePath: string = `/${pathOrImage.replaceAll("\\", "/")}`;
-    const path: string = fromServer ? `${FILE_PREFIX}${filePath}` : filePath;
-    return path;
-  }
+    if (isImage(pathOrImage) || pathOrImage === "") {
+        return pathOrImage;
+    } else {
+        const filePath: string = `/${pathOrImage.replaceAll("\\", "/")}`;
+        const path: string = fromServer ? `${FILE_PREFIX}${filePath}` : filePath;
+        return path;
+    }
 };
 
 function isImage(
-  pathOrImage: string | StaticImport
+    pathOrImage: string | StaticImport
 ): pathOrImage is StaticImport {
-  return typeof pathOrImage !== "string";
+    return typeof pathOrImage !== "string";
 }

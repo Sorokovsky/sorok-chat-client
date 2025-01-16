@@ -1,4 +1,4 @@
-import type { Base } from "@/types/models/base.type";
+import type {Base} from "@/types/models/base.type";
 
 export type User = {
     email: string,

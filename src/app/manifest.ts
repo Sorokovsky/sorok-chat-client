@@ -1,7 +1,7 @@
-import { ICON_SIZES, ICON_URL } from "@/constants/images.constants";
-import { DESCRIPTION, NAME } from "@/constants/seo.constants";
-import { pagesService } from "@/services/pages.service";
-import type { MetadataRoute } from "next";
+import {ICON_SIZES, ICON_URL} from "@/constants/images.constants";
+import {DESCRIPTION, NAME} from "@/constants/seo.constants";
+import {pagesService} from "@/services/pages.service";
+import type {MetadataRoute} from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
     return {

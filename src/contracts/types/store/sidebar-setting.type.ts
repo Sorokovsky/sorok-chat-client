@@ -1,6 +1,6 @@
 export type SidebarSetting = {
     isOpen: boolean;
-    closerSelector: string; 
+    closerSelector: string;
     show: () => void;
     hide: () => void;
     toggle: () => void;

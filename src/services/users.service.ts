@@ -1,4 +1,4 @@
-import type { GetUser } from "@/types/models/user/get-uset.type";
+import type {GetUser} from "@/types/models/user/get-uset.type";
 import api from "@/utils/api";
 
 class UserService {

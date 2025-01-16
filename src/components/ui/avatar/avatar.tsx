@@ -1,10 +1,10 @@
-import { AVATAR_SIZE } from "@/constants/common.constants";
-import type { StaticImport } from "next/dist/shared/lib/get-img-props";
+import {AVATAR_SIZE} from "@/constants/common.constants";
+import type {StaticImport} from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import type { FC, JSX, MouseEventHandler } from "react";
+import type {FC, JSX, MouseEventHandler} from "react";
 import cn from "clsx";
 import styles from "./avatar.module.sass";
-import { getAvatar } from "@/utils/get-avatar.util";
+import {getAvatar} from "@/utils/get-avatar.util";
 
 interface Props {
     fromServer?: boolean;
@@ -15,13 +15,13 @@ interface Props {
     id?: string;
 };
 export const Avatar: FC<Props> = ({
-    imageOrPath,
-    onClick,
-    fromServer = true,
-    alt = "avatar",
-    size = AVATAR_SIZE,
-    id
-}): JSX.Element => {
+                                      imageOrPath,
+                                      onClick,
+                                      fromServer = true,
+                                      alt = "avatar",
+                                      size = AVATAR_SIZE,
+                                      id
+                                  }): JSX.Element => {
     return (
         <button
             type="button"

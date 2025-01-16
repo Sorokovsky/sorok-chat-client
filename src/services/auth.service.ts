@@ -1,6 +1,6 @@
-import type { Auth } from "@/types/models/auth/auth.type";
-import type { CreateUser } from "@/types/models/user/create-user.type";
-import type { GetUser } from "@/types/models/user/get-uset.type";
+import type {Auth} from "@/types/models/auth/auth.type";
+import type {CreateUser} from "@/types/models/user/create-user.type";
+import type {GetUser} from "@/types/models/user/get-uset.type";
 import api from "@/utils/api";
 
 class AuthService {
