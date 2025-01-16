@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="fix physics of sidebar">
-      <change beforePath="$PROJECT_DIR$/src/components/pages/logout/logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/logout/logout.tsx" afterDir="false" />
+    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="feat: logout page">
+      <change beforePath="$PROJECT_DIR$/src/hooks/api/use-mutation.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/api/use-mutation.hook.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737025987902</updated>
-      <workItem from="1737025999651" duration="16874000" />
+      <workItem from="1737025999651" duration="17209000" />
     </task>
     <task id="LOCAL-00001" summary="base link component">
       <option name="closed" value="true" />
@@ -138,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737053793826</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: logout page">
+      <option name="closed" value="true" />
+      <created>1737054199410</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737054199410</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +165,8 @@
     <MESSAGE value="reformat" />
     <MESSAGE value="refactor routes" />
     <MESSAGE value="fix physics of sidebar" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix physics of sidebar" />
+    <MESSAGE value="feat: logout page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: logout page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />

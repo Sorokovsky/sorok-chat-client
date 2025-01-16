@@ -14,12 +14,11 @@ export const useMutation = (
         mutationKey: keys,
         mutationFn: callback,
         retry,
-        onSuccess() {
+        async onSuccess() {
             if (successMessage) {
                 toast.success(successMessage);
-                client.invalidateQueries({queryKey: refetchKeys});
-                client.resetQueries({queryKey: refetchKeys});
-                client.removeQueries({queryKey: refetchKeys});
+                await client.invalidateQueries({queryKey: refetchKeys});
+                await client.resetQueries({queryKey: refetchKeys});
             }
         },
         onError(error) {
