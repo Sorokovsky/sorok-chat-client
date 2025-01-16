@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="change icon size">
+    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="notification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/providers/global.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/providers/global.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/providers/tanstack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/providers/tanstack.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737025987902</updated>
-      <workItem from="1737025999651" duration="9408000" />
+      <workItem from="1737025999651" duration="10623000" />
     </task>
     <task id="LOCAL-00001" summary="base link component">
       <option name="closed" value="true" />
@@ -110,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737034622203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="notification">
+      <option name="closed" value="true" />
+      <created>1737037190673</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737037190673</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +128,8 @@
     <MESSAGE value="auth menu" />
     <MESSAGE value="add favicon" />
     <MESSAGE value="change icon size" />
-    <option name="LAST_COMMIT_MESSAGE" value="change icon size" />
+    <MESSAGE value="notification" />
+    <option name="LAST_COMMIT_MESSAGE" value="notification" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

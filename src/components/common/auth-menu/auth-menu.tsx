@@ -9,11 +9,11 @@ export const AuthMenu: FC = (): JSX.Element => {
     const {isAuth} = useIsAuth();
     const [menu, setMenu] = useState<MenuRoute[]>([]);
     useEffect(() => {
-        if(isAuth) {
+        if (isAuth) {
             setMenu(FOR_USER_AUTH_ROUTES);
         } else {
             setMenu(NOT_AUTH_ROUTES);
         }
     }, [isAuth]);
-    return <Menu menu={menu} />;
+    return <Menu menu={menu}/>;
 }

@@ -18,7 +18,7 @@ export const CurrentUserAvatar: FC<Props> = ({onClick, id}): JSX.Element => {
             {
                 isLoading
                     ?
-                    <Loader size={AVATAR_SIZE} />
+                    <Loader size={AVATAR_SIZE}/>
                     :
                     <Avatar
                         onClick={onClick}
