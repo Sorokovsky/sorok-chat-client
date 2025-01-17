@@ -7,7 +7,6 @@ export const useAuthGuard = (forAuth: boolean) => {
     const {isAuth} = useIsAuth();
     const router = useRouter();
     useEffect(() => {
-        console.log(isAuth)
         if (isAuth !== forAuth) {
             router.push(pagesService.home);
         }
