@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="feat: logout page">
-      <change beforePath="$PROJECT_DIR$/src/hooks/api/use-mutation.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/api/use-mutation.hook.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(not-auth)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layouts/for-auth-layout/for-auth-layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layouts/not-auth-layout/not-auth-layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/use-auth-guard.hook.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/logout/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/logout/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,22 +29,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Sorokovsky"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Sorokovsky&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Sorokovsky/sorok-chat-client.git",
-    "accountId": "ecd7104c-c343-49c4-8a2d-14a2d0d7cf1c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Sorokovsky/sorok-chat-client.git&quot;,
+    &quot;accountId&quot;: &quot;ecd7104c-c343-49c4-8a2d-14a2d0d7cf1c&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2rhzEMxYnNvRsJjXPnDxNDmKzXj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,6 +53,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -57,6 +64,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\progects\sorok-chat-client\src\app\(auth)" />
+      <recent name="D:\progects\sorok-chat-client\src\app\(not-auth)" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -72,7 +85,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737025987902</updated>
-      <workItem from="1737025999651" duration="17209000" />
+      <workItem from="1737025999651" duration="19199000" />
+      <workItem from="1737113325847" duration="2586000" />
     </task>
     <task id="LOCAL-00001" summary="base link component">
       <option name="closed" value="true" />
@@ -146,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737054199410</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: logout page">
+      <option name="closed" value="true" />
+      <created>1737054372373</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737054372373</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: logout page">
+      <option name="closed" value="true" />
+      <created>1737054567755</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737054567755</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
