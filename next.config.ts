@@ -8,6 +8,10 @@ const host: string = process.env[EnviromentKeys.API_HOST] || "";
 export const serverUrl: string = `${protocol}://${host}:${port}`;
 
 const nextConfig: NextConfig = {
+    i18n: {
+        defaultLocale: "uk",
+        locales: ['uk'],
+    },
     env: {
         [EnviromentKeys.API_HOST]: process.env[EnviromentKeys.API_HOST],
         [EnviromentKeys.API_PORT]: process.env[EnviromentKeys.API_PORT],

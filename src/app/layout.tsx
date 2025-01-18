@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     icons: {
         icon: LOGO_URL,
-    }
+    },
 };
 
 const RootLayout: FC<PropsWithChildren> = ({children}: PropsWithChildren): JSX.Element => {
