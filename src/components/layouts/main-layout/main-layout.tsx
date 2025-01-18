@@ -9,12 +9,13 @@ import styles from "./main-layout.module.sass";
 import {useChannelsSidebar} from '@/store/channels-settings/store';
 import {Link} from "@/ui/link/link";
 import {AuthMenu} from "@/commons/auth-menu/auth-menu";
+import {getLocale} from "@/utils/getLocale";
 
 export const MainLayout: FC<PropsWithChildren> = ({children}): JSX.Element => {
     const settingIsOpen = useUserSettings(state => state.isOpen);
     const channelsIsOpen = useChannelsSidebar(state => state.isOpen);
     return (
-        <html lang="uk" suppressHydrationWarning>
+        <html lang={getLocale()} suppressHydrationWarning>
         <body>
         <GlobalProvider>
             <Header/>

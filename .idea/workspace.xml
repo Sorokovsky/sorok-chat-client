@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="feat: auth guard">
+    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="feat: logout seo title">
+      <change afterPath="$PROJECT_DIR$/src/utils/getLocale.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/logout/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/logout/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -61,6 +62,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\progects\sorok-chat-client\src\utils" />
       <recent name="D:\progects\sorok-chat-client\src\app\(auth)" />
       <recent name="D:\progects\sorok-chat-client\src\app\(not-auth)" />
     </key>
@@ -82,7 +84,8 @@
       <updated>1737025987902</updated>
       <workItem from="1737025999651" duration="19199000" />
       <workItem from="1737113325847" duration="5162000" />
-      <workItem from="1737129067127" duration="2487000" />
+      <workItem from="1737129067127" duration="4206000" />
+      <workItem from="1737201532003" duration="2738000" />
     </task>
     <task id="LOCAL-00001" summary="base link component">
       <option name="closed" value="true" />
@@ -188,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737121366539</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat: logout seo title">
+      <option name="closed" value="true" />
+      <created>1737140225153</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1737140225153</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +220,8 @@
     <MESSAGE value="fix physics of sidebar" />
     <MESSAGE value="feat: logout page" />
     <MESSAGE value="feat: auth guard" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: auth guard" />
+    <MESSAGE value="feat: logout seo title" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: logout seo title" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
