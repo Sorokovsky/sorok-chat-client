@@ -5,3 +5,4 @@ export const TITLE_DEFAULT: string = `${NAME}`;
 export const HOME_TITLE: string = NAME;
 export const CHAT_TITLE: string = "Чати";
 export const LOGOUT_TITLE: string = "Вихід";
+export const LOGIN_TITLE: string = "Вхід";

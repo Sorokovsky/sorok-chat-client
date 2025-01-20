@@ -1,10 +1,11 @@
-import {useMutation as useFetching, type UseMutationOptions, useQueryClient} from "@tanstack/react-query";
+import {MutateFunction, useMutation as useFetching, useQueryClient} from "@tanstack/react-query";
 import type {QueryKeys} from "@/enums/query-keys.enum";
 import {toast} from "react-toastify";
+import type {ApiError} from "@/types/models/error/api-error.type";
 
-export const useMutation = (
+export const useMutation = <T, R>(
     keys: QueryKeys[],
-    callback: UseMutationOptions['mutationFn'],
+    callback: MutateFunction<R, ApiError, T>,
     successMessage?: string,
     refetchKeys: QueryKeys[] = [],
     retry: boolean = false,

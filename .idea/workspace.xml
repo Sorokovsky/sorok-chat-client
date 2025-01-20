@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="feat: detect locale">
+      <change afterPath="$PROJECT_DIR$/src/app/(not-auth)/login/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/login-form/login-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/login/login.module.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/login/login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/form/form.module.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/form/form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/form/input/input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/heading/heading.module.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/heading/heading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/api/use-login.hook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getLocale.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/constants/seo.constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/constants/seo.constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/api/use-mutation.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/api/use-mutation.hook.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +74,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\progects\sorok-chat-client\src\components\ui" />
       <recent name="D:\progects\sorok-chat-client\src\hooks" />
       <recent name="D:\progects\sorok-chat-client\src\utils" />
       <recent name="D:\progects\sorok-chat-client\src\app\(auth)" />
