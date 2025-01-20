@@ -1,0 +1,13 @@
+.label
+  @apply font-bold
+
+.input
+  @apply outline-none border border-gray-300 px-2 py-1 rounded-xl w-full transition-all duration-500
+  &:-webkit-autofill
+    background-color: white !important
+
+  &:focus-within
+    @apply border-gray-900
+
+  &:hover
+    @apply border-gray-600

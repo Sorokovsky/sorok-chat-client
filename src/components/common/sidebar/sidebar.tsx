@@ -1,5 +1,5 @@
 "use client"
-import type {FC, JSX, PropsWithChildren} from "react";
+import {type FC, type JSX, type PropsWithChildren} from "react";
 import cn from "clsx";
 import styles from "./sidebar.module.sass";
 

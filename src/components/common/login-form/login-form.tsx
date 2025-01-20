@@ -19,15 +19,19 @@ export const LoginForm: FC = (): JSX.Element => {
         >
             <Heading>Вхід</Heading>
             <Input
+                label={"Ваша електронна адреса:"}
                 placeholder={"Введіть електронну адресу"}
+                autoComplete={"email"}
                 type={"email"}
                 {...register("email", {
                     required: true,
                 })}
             />
             <Input
+                label={"Ваш пароль:"}
                 placeholder={"Введіть пароль"}
                 type={"password"}
+                autoComplete={"current-password"}
                 {...register("password", {
                     required: true,
                 })}

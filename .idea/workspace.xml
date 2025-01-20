@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="feat: detect locale">
-      <change afterPath="$PROJECT_DIR$/src/app/(not-auth)/login/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/login-form/login-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/login/login.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/login/login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/form/form.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/form/form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/form/input/input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/heading/heading.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/heading/heading.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/api/use-login.hook.ts" afterDir="false" />
+    <list default="true" id="0ef0d7d8-983d-47a6-987b-d49e213bb3f0" name="Changes" comment="feat: start form component">
+      <change afterPath="$PROJECT_DIR$/src/components/common/menu-sidebar/menu-sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/form/input/input.module.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contracts/constants/seo.constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/constants/seo.constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/api/use-mutation.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/api/use-mutation.hook.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/login-form/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/login-form/login-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/sidebar/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/sidebar/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/main-layout/main-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/form/input/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/form/input/input.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -101,6 +94,7 @@
       <workItem from="1737129067127" duration="4206000" />
       <workItem from="1737201532003" duration="3096000" />
       <workItem from="1737205849518" duration="2994000" />
+      <workItem from="1737392561233" duration="3150000" />
     </task>
     <task id="LOCAL-00001" summary="base link component">
       <option name="closed" value="true" />
@@ -222,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737205615247</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: start form component">
+      <option name="closed" value="true" />
+      <created>1737374888317</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1737374888317</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +247,8 @@
     <MESSAGE value="feat: auth guard" />
     <MESSAGE value="feat: logout seo title" />
     <MESSAGE value="feat: detect locale" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: detect locale" />
+    <MESSAGE value="feat: start form component" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: start form component" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
