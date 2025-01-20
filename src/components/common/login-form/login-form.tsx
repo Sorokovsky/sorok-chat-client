@@ -6,6 +6,7 @@ import {type SubmitHandler, useForm} from "react-hook-form";
 import type {Auth} from "@/types/models/auth/auth.type";
 import {useLogin} from "@/hooks/api/use-login.hook";
 import {Input} from "@/ui/form/input/input";
+import {Button} from "@/ui/form/button/button";
 
 export const LoginForm: FC = (): JSX.Element => {
     const {register, handleSubmit} = useForm<Auth>();
@@ -36,6 +37,7 @@ export const LoginForm: FC = (): JSX.Element => {
                     required: true,
                 })}
             />
+            <Button>Увійти</Button>
         </Form>
     );
 };

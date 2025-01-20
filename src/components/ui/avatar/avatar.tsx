@@ -13,7 +13,7 @@ interface Props {
     alt?: string;
     size?: number;
     id?: string;
-};
+}
 export const Avatar: FC<Props> = ({
                                       imageOrPath,
                                       onClick,
