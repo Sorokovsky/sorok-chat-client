@@ -1,10 +1,11 @@
 import {FC, JSX, PropsWithChildren} from "react";
+import {MainLayout} from "@/layouts/main-layout/main-layout";
 
 const RootLayout: FC<PropsWithChildren> = ({children}): JSX.Element => {
     return (
-        <html lang="en">
+        <MainLayout>
             {children}
-        </html>
+        </MainLayout>
     );
 }
 

@@ -1,10 +1,9 @@
-import styles from "./page.module.scss";
 import {JSX} from "react";
+import {NextPage} from "next";
+import {HomePage} from "@/pages/home/home";
 
-export default function Home(): JSX.Element {
-  return (
-    <div className={styles.page}>
+const Index: NextPage = (): JSX.Element => {
+    return <HomePage />;
+};
 
-    </div>
-  );
-}
+export default Index;
