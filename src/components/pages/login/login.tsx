@@ -12,8 +12,6 @@ import {LoginDto} from "@/contracts/login.contract";
 
 
 export const LoginPage: NextPage = (): JSX.Element => {
-    const [email, setEmail] = useState<string>("");
-    const [password, setPassword] = useState<string>("");
     const {mutate: login} = useLogin();
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -55,8 +53,6 @@ export const LoginPage: NextPage = (): JSX.Element => {
                     name={"email"}
                     type={"email"}
                     autoComplete="off"
-                    value={email}
-                    onChange={(event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
                 />
                 <TextField
                     id="password"
@@ -65,8 +61,6 @@ export const LoginPage: NextPage = (): JSX.Element => {
                     name={"password"}
                     type={"password"}
                     autoComplete="off"
-                    value={password}
-                    onChange={(event: ChangeEvent<HTMLInputElement>) => setPassword(event.target.value)}
                 />
                 <Button
                     variant="contained"

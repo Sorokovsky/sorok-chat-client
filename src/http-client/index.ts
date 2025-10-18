@@ -12,7 +12,6 @@ httpClient.interceptors.request.use(request => {
 });
 
 httpClient.interceptors.response.use(response => {
-    console.log(response)
     const accessToken = response.headers[AUTHORIZATION_HEADER];
     localStorage.setItem(ACCESS_TOKEN_KEY, accessToken);
     return response;
