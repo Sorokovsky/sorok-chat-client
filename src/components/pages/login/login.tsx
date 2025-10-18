@@ -12,22 +12,22 @@ import {LoginDto} from "@/contracts/login.contract";
 
 
 export const LoginPage: NextPage = (): JSX.Element => {
-    const {mutate: login} = useLogin();
+    const {mutate: login, isPending} = useLogin();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // @ts-ignore
-        const result: LoginDto = {};
-        const formData = new FormData(event.currentTarget);
-        formData.forEach((value, key) => {
-            // @ts-ignore
-            result[key] = value;
-        });
+        const result: LoginDto = {
+            email,
+            password,
+        };
         login(result);
     };
     return (
         <div className={clsx("page", styles.page)}>
             <Box
                 component={"form"}
+                method={"post"}
                 autoComplete="off"
                 style={{
                     display: "flex",
@@ -52,6 +52,8 @@ export const LoginPage: NextPage = (): JSX.Element => {
                     name={"email"}
                     type={"email"}
                     autoComplete="off"
+                    value={email}
+                    onChange={(event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
                 />
                 <TextField
                     id="password"
@@ -60,10 +62,13 @@ export const LoginPage: NextPage = (): JSX.Element => {
                     name={"password"}
                     type={"password"}
                     autoComplete="off"
+                    value={password}
+                    onChange={(event: ChangeEvent<HTMLInputElement>) => setPassword(event.target.value)}
                 />
                 <Button
                     variant="contained"
                     type={"submit"}
+                    disabled={isPending}
                 >Увійти</Button>
             </Box>
         </div>
