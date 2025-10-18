@@ -16,13 +16,12 @@ export const LoginPage: NextPage = (): JSX.Element => {
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
-        const result: LoginDto = {};
+        const result: Partial<LoginDto> = {};
         formData.entries().forEach((item) => {
             const key: string = item[0];
             const value = item[1];
-            result[key] = value
+            result[key] = value;
         });
-        console.log(result);
         login(result as LoginDto);
     };
     return (

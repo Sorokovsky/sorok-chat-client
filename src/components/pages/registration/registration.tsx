@@ -16,14 +16,13 @@ export const RegistrationPage: NextPage = (): JSX.Element => {
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
-        const result: NewUser = {};
+        const result: Partial<NewUser> = {};
         formData.entries().forEach((item) => {
             const key: string = item[0];
             const value = item[1];
-            result[key] = value
+            result[key] = value;
         });
-        console.log(result);
-        register(result)
+        register(result as NewUser);
     };
     return (
         <div className={clsx("page", styles.page)}>
