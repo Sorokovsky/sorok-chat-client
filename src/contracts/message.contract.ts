@@ -4,4 +4,5 @@ import {User} from "@/contracts/user.contract";
 export type Message = Base & {
     author: User;
     text: string;
+    mac: string
 };
