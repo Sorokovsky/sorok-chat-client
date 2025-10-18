@@ -58,7 +58,7 @@ export const HomePage: NextPage = (): JSX.Element => {
                             <strong>Автор: {message.author.lastName} {message.author.firstName} {message.author.middleName}</strong>
                             <p>{message.text}</p>
                             <p>{message.createdAt.toString()}</p>
-                            <p>Повідрмлення {generateMac(message.text, message.author.email) === message.mac ? "перевірино" : "пошкоджено"}</p>
+                            <p>Повідрмлення {generateMac(message.text, message.author.email) === message.mac ? "перевірено" : "пошкоджено"}</p>
                         </li>
                 )))}
                 </ul>
