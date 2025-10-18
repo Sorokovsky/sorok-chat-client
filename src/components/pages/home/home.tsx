@@ -8,7 +8,7 @@ import { useGetMyChannels } from '@/hooks/get-my-channels.hooks';
 import { Channel } from "@/contracts/channel.contract";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { FormEvent } from "react";
 import { NewMessage } from "@/contracts/new-message.contract";
 import { useWriteMessage } from "@/hooks/write-message.hook";
@@ -43,9 +43,11 @@ export const HomePage: NextPage = (): JSX.Element => {
                 </ul>
             </div>
             <div className={clsx(styles.messages)}>
+                <Typography variant="h4">{currentChannel?.name}</Typography>
                 <ul>
                     {currentChannel && currentChannel.messages.map((message => (
                         <li key={message.id}>
+                            <strong>Автор: {message.author.lastName} {message.author.firstName} {message.author.middleName}</strong>
                             <p>{message.text}</p>
                             <p>{message.createdAt.toString()}</p>
                         </li>
