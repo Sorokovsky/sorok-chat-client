@@ -5,4 +5,5 @@ export type User = Base & {
     firstName: string;
     lastName: string;
     middleName: string;
+    macSecret: string;
 };

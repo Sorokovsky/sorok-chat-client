@@ -30,7 +30,7 @@ export const HomePage: NextPage = (): JSX.Element => {
         setCurrentChannel(channels?.filter(channel => channel.id == id)[0]!);
     };
     const sendMessage = (text: string) => {
-        const message: NewMessage = { text, mac: generateMac(text, user!.email) };
+        const message: NewMessage = { text, mac: generateMac(text, user!.macSecret) };
         
         write({ message, channelId: currentChannel!.id });
     }
@@ -58,7 +58,7 @@ export const HomePage: NextPage = (): JSX.Element => {
                             <strong>Автор: {message.author.lastName} {message.author.firstName} {message.author.middleName}</strong>
                             <p>{message.text}</p>
                             <p>{message.createdAt.toString()}</p>
-                            <p>Повідрмлення {generateMac(message.text, message.author.email) === message.mac ? "перевірено" : "пошкоджено"}</p>
+                            <p>Повідрмлення {generateMac(message.text, message.author.macSecret) === message.mac ? "перевірено" : "пошкоджено"}</p>
                         </li>
                 )))}
                 </ul>
