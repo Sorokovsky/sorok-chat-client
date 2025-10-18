@@ -1,3 +1,5 @@
 import {User} from "@/contracts/user.contract";
 
-export type NewUser = Omit<User, "id" | "createdAt" | "updatedAt">;
+export type NewUser = Omit<User, "id" | "createdAt" | "updatedAt"> & {
+    password: string;
+};

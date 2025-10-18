@@ -5,25 +5,25 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Heading from "@mui/material/Typography";
-import styles from "./login.module.scss";
+import styles from "./registration.module.scss";
 import clsx from "clsx";
-import {useLogin} from "@/hooks/login.hook";
-import {LoginDto} from "@/contracts/login.contract";
+import {useRegistration} from "@/hooks/registration.hook";
+import {NewUser} from "@/contracts/new-user.contract";
 
 
-export const LoginPage: NextPage = (): JSX.Element => {
-    const {mutate: login, isPending} = useLogin();
+export const RegistrationPage: NextPage = (): JSX.Element => {
+    const {mutate: register, isPending} = useRegistration();
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
-        const result: LoginDto = {};
+        const result: NewUser = {};
         formData.entries().forEach((item) => {
             const key: string = item[0];
             const value = item[1];
             result[key] = value
         });
         console.log(result);
-        login(result as LoginDto);
+        register(result)
     };
     return (
         <div className={clsx("page", styles.page)}>
@@ -45,7 +45,7 @@ export const LoginPage: NextPage = (): JSX.Element => {
                     variant={"h3"}
                     align={"center"}
                 >
-                    Форма авторизації
+                    Форма реєстрації
                 </Heading>
                 <TextField
                     required
@@ -63,6 +63,33 @@ export const LoginPage: NextPage = (): JSX.Element => {
                     variant="outlined"
                     name={"password"}
                     type={"password"}
+                    autoComplete="off"
+                />
+                <TextField
+                    required
+                    id="firstName"
+                    label="Ім'я"
+                    variant="outlined"
+                    name={"firstName"}
+                    type={"text"}
+                    autoComplete="off"
+                />
+                <TextField
+                    required
+                    id="lastName"
+                    label="Прізвище"
+                    variant="outlined"
+                    name={"lastName"}
+                    type={"text"}
+                    autoComplete="off"
+                />
+                <TextField
+                    required
+                    id="middleName"
+                    label="По батькові"
+                    variant="outlined"
+                    name={"middleName"}
+                    type={"text"}
                     autoComplete="off"
                 />
                 <Button
