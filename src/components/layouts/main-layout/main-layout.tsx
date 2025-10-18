@@ -11,9 +11,9 @@ export const MainLayout: FC<PropsWithChildren> = ({children}): JSX.Element => {
         <html lang="en" suppressHydrationWarning>
             <body>
                 <QueryClientProvider client={queryClient}>
-                        <ChakraProvider>
-                            {children}
-                        </ChakraProvider>
+                    <ChakraProvider>
+                        {children}
+                    </ChakraProvider>
                 </QueryClientProvider>
             </body>
         </html>
