@@ -22,7 +22,6 @@ export const LoginPage: NextPage = (): JSX.Element => {
             // @ts-ignore
             result[key] = value;
         });
-        console.log(result);
         login(result);
     };
     return (
