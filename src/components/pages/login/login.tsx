@@ -46,6 +46,7 @@ export const LoginPage: NextPage = (): JSX.Element => {
                     Форма авторизації
                 </Heading>
                 <TextField
+                    required
                     id="email"
                     label="Електронна адреса"
                     variant="outlined"
@@ -56,6 +57,7 @@ export const LoginPage: NextPage = (): JSX.Element => {
                     onChange={(event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
                 />
                 <TextField
+                    required
                     id="password"
                     label="Пароль"
                     variant="outlined"
