@@ -5,7 +5,7 @@ import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
 const queryClient: QueryClient = new QueryClient();
 
-export const MainLayout: FC<PropsWithChildren> = ({children}): JSX.Element => {
+export const MainLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => {
     return (
         <html lang="en" suppressHydrationWarning>
             <body>

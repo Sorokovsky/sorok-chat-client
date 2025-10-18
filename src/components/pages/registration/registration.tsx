@@ -9,10 +9,12 @@ import styles from "./registration.module.scss";
 import clsx from "clsx";
 import {useRegistration} from "@/hooks/registration.hook";
 import {NewUser} from "@/contracts/new-user.contract";
+import { useFilterAccess } from "@/hooks/use-filter-access.hook";
 
 
 export const RegistrationPage: NextPage = (): JSX.Element => {
-    const {mutate: register, isPending} = useRegistration();
+    const { mutate: register, isPending } = useRegistration();
+    useFilterAccess(false);
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);

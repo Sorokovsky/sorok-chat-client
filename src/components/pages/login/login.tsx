@@ -9,10 +9,12 @@ import styles from "./login.module.scss";
 import clsx from "clsx";
 import {useLogin} from "@/hooks/login.hook";
 import {LoginDto} from "@/contracts/login.contract";
+import { useFilterAccess } from "@/hooks/use-filter-access.hook";
 
 
 export const LoginPage: NextPage = (): JSX.Element => {
     const {mutate: login, isPending} = useLogin();
+    useFilterAccess(false);
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);

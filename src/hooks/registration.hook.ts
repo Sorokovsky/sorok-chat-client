@@ -8,7 +8,8 @@ export const useRegistration = () => {
         mutationKey: [REGISTER_KEY],
         mutationFn: authenticationService.registration,
         async onSuccess() {
-            await queryClient.invalidateQueries({queryKey: [PROFILE_KEY, GET_MY_CHANNELS]});
+            await queryClient.resetQueries({ queryKey: [PROFILE_KEY, GET_MY_CHANNELS] });
+            queryClient.clear();
         }
     })
 };

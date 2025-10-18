@@ -8,7 +8,8 @@ export const useLogout = () => {
         mutationKey: [LOGOUT_KEY],
         mutationFn: authenticationService.logout,
         async onSuccess(): Promise<void> {
-            await queryClient.invalidateQueries({queryKey: [PROFILE_KEY, GET_MY_CHANNELS]});
+            await queryClient.resetQueries({queryKey: [PROFILE_KEY, GET_MY_CHANNELS]});
+            queryClient.clear();
         }
     })
 }

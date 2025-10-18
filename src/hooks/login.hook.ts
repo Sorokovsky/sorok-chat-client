@@ -8,7 +8,8 @@ export const useLogin = () => {
         mutationKey: [LOGIN_KEY],
         mutationFn: authenticationService.login,
         async onSuccess(): Promise<void> {
-            await queryClient.invalidateQueries({queryKey: [PROFILE_KEY, GET_MY_CHANNELS]});
+            await queryClient.resetQueries({ queryKey: [PROFILE_KEY, GET_MY_CHANNELS] });
+            queryClient.clear();
         }
     });
 }
