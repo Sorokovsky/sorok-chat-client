@@ -4,11 +4,12 @@ import { useIsAuthenticated } from './is-authenticated.hook';
 export const useFilterAccess = (forAuthenticated: boolean): void => {
     const router = useRouter();
     const isAuthenticated = useIsAuthenticated();
-    useEffect(() => {
-        console.log(isAuthenticated, forAuthenticated);
-        
-        if (isAuthenticated !== forAuthenticated) {
+    useEffect(() => {        
+        if (isAuthenticated && !forAuthenticated) {
             router.push("/");
+        }
+        if (!isAuthenticated && forAuthenticated) {
+            router.push("/login");
         }
     }, [isAuthenticated])
 }
