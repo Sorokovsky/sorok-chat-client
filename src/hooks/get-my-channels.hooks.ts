@@ -6,4 +6,5 @@ export const useGetMyChannels = () => useQuery({
     queryKey: [GET_MY_CHANNELS],
     queryFn: channelsService.getMyChannels,
     refetchInterval: 1000,
+    refetchIntervalInBackground: true
 });
