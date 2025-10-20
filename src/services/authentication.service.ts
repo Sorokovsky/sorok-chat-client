@@ -10,8 +10,6 @@ class AuthenticationService {
             const response = await client.get<User>(`/authentication/profile`);
             return response.data;
         } catch (error) {
-            console.log(error);
-            
             return null;
         }
     }
