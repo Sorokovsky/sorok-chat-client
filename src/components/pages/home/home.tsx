@@ -1,5 +1,4 @@
 "use client"
-import { useFilterAccess } from "@/hooks/use-filter-access.hook";
 import clsx from "clsx";
 import {NextPage} from "next";
 import { JSX, useState } from 'react';
@@ -20,7 +19,6 @@ const generateMac = (text: string, secret: string): string => {
 };
 
 export const HomePage: NextPage = (): JSX.Element => {
-    useFilterAccess(true);
     const { data: channels } = useGetMyChannels();
     const [currentChannel, setCurrentChannel] = useState<Channel | null>(null);
     const { data: user } = useGetProfile();

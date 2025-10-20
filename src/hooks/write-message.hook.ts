@@ -6,9 +6,12 @@ export const useWriteMessage = () => {
     return useMutation({
         mutationKey: [WRITE_MESSAGE],
         mutationFn: channelsService.writeMessage,
-        async onSuccess() {
-            await queryClient.resetQueries({queryKey: [GET_MY_CHANNELS]});
-            queryClient.clear();
-        }
+        onSuccess() {
+            queryClient.invalidateQueries({ queryKey: [GET_MY_CHANNELS] });
+        },
+
+        onError() {
+            queryClient.refetchQueries({ queryKey: [GET_MY_CHANNELS], exact: false });
+        },
     });
 };

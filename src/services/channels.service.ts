@@ -4,9 +4,9 @@ import {client} from "@/http-client";
 import { AxiosResponse } from 'axios';
 
 class ChannelsService {
-    public async getMyChannels(): Promise<Channel[]> {
+    public async getMyChannels(): Promise<Channel[] | null> {
         const response = await client.get<Channel[]>("/channels/by-me");
-        return response.data;
+        return response.data || null;
     }
 
     public async writeMessage({message, channelId}: {message: NewMessage, channelId: number}): Promise<Channel> {
