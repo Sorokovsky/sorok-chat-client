@@ -1,1 +1,2 @@
-export { authenticationService } from "./authentication.service";
+export { useGetProfile } from "./get-profile.hook";
+export { useIsAuthenticated } from "./is-authenticated.hook";

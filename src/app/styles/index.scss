@@ -3,3 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+a, li {
+    font-size: inherit;
+    color: inherit;
+    font-style: inherit;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}

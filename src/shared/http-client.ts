@@ -25,6 +25,7 @@ client.interceptors.response.use(
     (config) => {
         const header: string = config.response.headers[HEADER_NAME.toLowerCase()] || " ";
         localStorage.setItem(TOKEN_KEY, header.replace(BEARER_PREFIX, ""));
+        if (config.response.data == "") config.response.data = null;
         return config.response;
     }
 );

@@ -1,6 +1,6 @@
 import { RegistrationPage, HomePage, LoginPage } from "@/pages";
 import { AccessRule } from "@/features/authentication";
-import { Route } from "@/app/routes/route";
+import { Route } from "@/shared/routes/route";
 
 export const HOME_ROUTE: Route = {
     accessRule: AccessRule.PRIVATE,

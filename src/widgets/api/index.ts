@@ -1,0 +1,1 @@
+export { useGetRoutesByAccess } from "./get-routes-by-access.hook";
