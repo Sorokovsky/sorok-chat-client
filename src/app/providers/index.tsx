@@ -5,7 +5,7 @@ import { QueryProvider } from "./query";
 export const Providers: FC = (): JSX.Element => {
     return (
         <QueryProvider>
-                <RouterProvider />
+            <RouterProvider />
         </QueryProvider>
     );
 };

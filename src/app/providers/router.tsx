@@ -19,6 +19,6 @@ const router = createBrowserRouter([
 
 export const RouterProvider: FC = (): JSX.Element => {
     return (
-            <Provider router={router} />
+        <Provider router={router} />
     );
 };
