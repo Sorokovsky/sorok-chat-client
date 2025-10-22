@@ -1,4 +1,4 @@
-import { ROUTES } from "@/constants/routes";
+import { ROUTES } from "../routes";
 import { FC, JSX } from "react";
 import { createBrowserRouter, RouterProvider as Provider, RouteObject } from "react-router";
 

@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import * as path from 'path'
-import { API_URL, SERVER_URL } from './src/constants/api';
+import { API_URL, SERVER_URL } from './src/shared/api';
 
 // https://vite.dev/config/
 export default defineConfig({

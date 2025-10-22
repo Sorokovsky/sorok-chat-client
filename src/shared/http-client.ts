@@ -1,11 +1,11 @@
-import { API_URL, BEARER_PREFIX, HEADER_NAME, TOKEN_KEY } from "@/constants/api";
+import { API_URL, BEARER_PREFIX, HEADER_NAME, TOKEN_KEY } from "@/shared/api";
 import axios from "axios";
 
-const httpClient = axios.create({
+const client = axios.create({
     baseURL: API_URL,
 });
 
-httpClient.interceptors.request.use(config => {
+client.interceptors.request.use(config => {
     const accessToken = localStorage.getItem(TOKEN_KEY) || " ";
     config.headers[HEADER_NAME] = `${BEARER_PREFIX}${accessToken}`
     return config;
@@ -16,7 +16,7 @@ httpClient.interceptors.request.use(config => {
 }
 );
 
-httpClient.interceptors.response.use(
+client.interceptors.response.use(
     (config) => {
         const header: string = config.headers[HEADER_NAME.toLowerCase()] || " ";
         localStorage.setItem(TOKEN_KEY, header.replace(BEARER_PREFIX, ""));
@@ -28,3 +28,5 @@ httpClient.interceptors.response.use(
         return config.response;
     }
 );
+
+export const httpClient = client;

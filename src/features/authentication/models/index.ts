@@ -1,0 +1,1 @@
+export { AccessRule } from "./access-rule";

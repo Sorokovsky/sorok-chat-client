@@ -1,8 +1,6 @@
-import { HomePage } from "@/components/pages/home/home";
-import { LoginPage } from "@/components/pages/login/login";
-import { RegistrationPage } from "@/components/pages/registration/registration";
-import { AccessRule } from "@/interfaces/access-rule";
-import { Route } from "@/interfaces/route";
+import { RegistrationPage, HomePage, LoginPage } from "@/pages";
+import { AccessRule } from "@/features/authentication";
+import { Route } from "@/app/routes/route";
 
 export const HOME_ROUTE: Route = {
     accessRule: AccessRule.PRIVATE,
