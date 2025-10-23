@@ -6,7 +6,7 @@ import { Button, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { TextInput } from "./input/input";
 
-export const Form: FC<FormProps> = ({ title, inputs, submitHandler }): JSX.Element => {
+export const Form: FC<FormProps> = ({ title, inputs, submitHandler, submitText }): JSX.Element => {
     const { register, handleSubmit } = useForm();
     return (
         <div className={clsx(styles.form)}>
@@ -23,7 +23,7 @@ export const Form: FC<FormProps> = ({ title, inputs, submitHandler }): JSX.Eleme
                         registerOptions={input.registerOptions}
                     />
                 ))}
-                <Button type="submit" variant="contained">Увійти</Button>
+                <Button type="submit" variant="contained">{submitText}</Button>
             </form>
         </div>
     );
