@@ -1,4 +1,4 @@
-import { API_URL, BEARER_PREFIX, HEADER_NAME, TOKEN_KEY } from "@/shared/api";
+import { API_URL, BEARER_PREFIX, HEADER_NAME, TOKEN_KEY } from "../constants";
 import axios from "axios";
 
 const client = axios.create({

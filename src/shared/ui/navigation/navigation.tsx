@@ -1,4 +1,4 @@
-import { useGetRoutesByAccess } from "@/widgets/api";
+import { useGetRoutesByAccess } from "../../api";
 import type { FC, JSX } from "react";
 import { NavigationItem } from "../navigation-item/navigation-item";
 import clsx from "classnames";

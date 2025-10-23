@@ -2,7 +2,7 @@ import { AppBar, Toolbar } from "@mui/material";
 import type { FC, JSX } from "react";
 import clsx from "classnames";
 import styles from "./header.module.scss";
-import { Navigation } from "@/shared";
+import { Navigation, NavigationItem, HOME_ROUTE } from "@/shared";
 
 export const Header: FC = (): JSX.Element => {
     return (
@@ -13,6 +13,7 @@ export const Header: FC = (): JSX.Element => {
             <Toolbar
                 className={clsx(styles.container)}
             >
+                <NavigationItem route={HOME_ROUTE} />
                 <Navigation />
             </Toolbar>
         </AppBar>
