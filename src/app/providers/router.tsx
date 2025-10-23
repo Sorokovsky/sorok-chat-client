@@ -4,10 +4,12 @@ import { createBrowserRouter, RouterProvider as Provider, RouteObject } from "re
 import { HOME_ROUTE } from '@/shared/routes/';
 import { Layout } from "./layout";
 
-const routerObjects: RouteObject[] = ROUTES.map(route => ({
-    element: route.element,
-    path: route.path,
-}))
+const routerObjects: RouteObject[] = ROUTES.map(route => {
+    return {
+        element: route.element,
+        path: route.path,
+    }
+})
 
 const router = createBrowserRouter([
     {

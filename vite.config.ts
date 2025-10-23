@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import * as path from 'path'
-import { API_URL, SERVER_URL } from './src/shared/api';
+import { API_URL, SERVER_URL } from './src/shared/constants';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,6 +12,11 @@ export default defineConfig({
       },
     }),
   ],
+  css: {
+    modules: {
+      localsConvention: "camelCase"
+    }
+  },
   resolve: {
     alias: [
       {
