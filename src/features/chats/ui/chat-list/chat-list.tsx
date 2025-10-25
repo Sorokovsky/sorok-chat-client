@@ -1,4 +1,4 @@
-import type { FC, JSX } from "react";
+import { type FC, type JSX } from "react";
 import type { ChatListProps } from "./chat-list.props";
 import clsx from 'classnames';
 import styles from "./chat-list.module.scss";
