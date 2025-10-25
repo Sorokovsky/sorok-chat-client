@@ -1,4 +1,4 @@
-import { RegistrationPage, HomePage, LoginPage, LogoutPage } from "@/pages";
+import { RegistrationPage, HomePage, LoginPage, LogoutPage, NewChat } from "@/pages";
 import { AccessRule } from "@/features/authentication";
 import { Route } from "@/shared/routes/route";
 
@@ -30,4 +30,11 @@ export const LOGOUT_ROUTE: Route = {
     element: <LogoutPage />
 };
 
-export const ROUTES = [HOME_ROUTE, REGISTRATION_ROUTE, LOGIN_ROUTE, LOGOUT_ROUTE];
+export const CREATE_CHAT_ROUTE: Route = {
+    accessRule: AccessRule.PRIVATE,
+    name: "Створити чат",
+    path: "/new-chat",
+    element: <NewChat />
+};
+
+export const ROUTES = [HOME_ROUTE, REGISTRATION_ROUTE, LOGIN_ROUTE, LOGOUT_ROUTE, CREATE_CHAT_ROUTE];

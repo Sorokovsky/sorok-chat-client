@@ -1,6 +1,6 @@
 import { httpClient } from "@/shared";
-import { GET_CHANNELS_BY_ME, SEND_MESSAGE,  } from "../constants/routes";
-import type { Channel, NewMessage } from "../models";
+import { CHANNELS_ROUTE, GET_CHANNELS_BY_ME, SEND_MESSAGE,  } from "../constants/routes";
+import type { Channel, NewChannel, NewMessage } from "../models";
 
 class ChannelsService {
     public async getByMe(): Promise<Channel[]> {
@@ -12,6 +12,11 @@ class ChannelsService {
         const response = await httpClient.put(`${SEND_MESSAGE}/${channelId}`, message);
         return response.data;
     };
+
+    public async createChannel(channel: NewChannel): Promise<Channel> {
+        const response = await httpClient.post(CHANNELS_ROUTE, channel);
+        return response.data;
+    }
 };
 
 export const channelsService = new ChannelsService();
