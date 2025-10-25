@@ -1,0 +1,17 @@
+.chat {
+    padding: 10px 20px;
+    padding-right: 0;
+    flex: 1 0 auto;
+}
+
+.heading {
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 10px;
+}
+
+.description {
+    font-size: 20px;
+}

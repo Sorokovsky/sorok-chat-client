@@ -6,5 +6,5 @@ export type Channel = Base & {
     name: string;
     description: string;
     members: User[];
-    message: Message[];
+    messages: Message[];
 };
