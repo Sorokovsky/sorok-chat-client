@@ -4,6 +4,7 @@ import clsx from 'classnames';
 import styles from './chat.module.scss';
 import { Typography } from '@mui/material';
 import { Messages } from '../messages/messages';
+import { SendMessage } from '../send-message/send-message';
 
 export const Chat: FC<ChatProps> = ({chat}): JSX.Element => {
     return (
@@ -13,6 +14,7 @@ export const Chat: FC<ChatProps> = ({chat}): JSX.Element => {
                 <p className={clsx(styles.description)}>{chat.description}</p>
             </div>
             <Messages messages={chat.messages} />
+            <SendMessage />
         </div>
     );
 };

@@ -5,7 +5,7 @@ import styles from "./chat-list.module.scss";
 import { Typography } from "@mui/material";
 import { ChatItem } from "./chat-item/chat-item";
 
-export const ChatList: FC<ChatListProps> = ({title, chats}): JSX.Element => {
+export const ChatList: FC<ChatListProps> = ({ title, chats }): JSX.Element => {
     return (
         <aside className={clsx(styles.chats)}>
             <Typography variant="h5">{title}</Typography>

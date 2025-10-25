@@ -1,14 +1,15 @@
 import { FC, JSX } from "react";
 import clsx from 'classnames';
 import styles from "./home.module.scss";
-import { Chat, ChatList, useGetChannelsByMe } from "@/features/chats";
+import { Chat, ChatList, useCurrentChat, useGetChannelsByMe } from "@/features/chats";
 
 export const HomePage: FC = (): JSX.Element => {
     const { data: chats } = useGetChannelsByMe();
+    const currentChat = useCurrentChat(store => store.currentChat);
     return (
         <div className={clsx(styles.page)}>
             <ChatList title="Чати" chats={chats || []} />
-            {chats !== undefined && chats.length > 0 && <Chat chat={chats[0]} />}
+            {currentChat && <Chat chat={currentChat} />}
         </div>
     )
 };

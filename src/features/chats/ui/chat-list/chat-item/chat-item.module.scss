@@ -5,7 +5,7 @@
     transition: .3s all ease;
     cursor: pointer;
     margin-top: 10px;
-    &:hover {
+    &:hover, &.active {
         background-color: gray;
         color: #fff;
     }
