@@ -1,4 +1,4 @@
-import { RegistrationPage, HomePage, LoginPage } from "@/pages";
+import { RegistrationPage, HomePage, LoginPage, LogoutPage } from "@/pages";
 import { AccessRule } from "@/features/authentication";
 import { Route } from "@/shared/routes/route";
 
@@ -23,4 +23,11 @@ export const LOGIN_ROUTE: Route = {
     element: <LoginPage />
 };
 
-export const ROUTES = [HOME_ROUTE, REGISTRATION_ROUTE, LOGIN_ROUTE];
+export const LOGOUT_ROUTE: Route = {
+    accessRule: AccessRule.PRIVATE,
+    name: "Вихід",
+    path: "/logout",
+    element: <LogoutPage />
+};
+
+export const ROUTES = [HOME_ROUTE, REGISTRATION_ROUTE, LOGIN_ROUTE, LOGOUT_ROUTE];

@@ -13,14 +13,14 @@ export const Form: FC<FormProps> = ({ title, inputs, submitHandler, submitText }
             <form onSubmit={handleSubmit(submitHandler)} >
                 <Typography component={"h3"} variant="h3" className={clsx(styles.title)}>{title}</Typography>
                 
-                {inputs.map(input => (
+                {inputs.map(({name, label, type, registerOptions}) => (
                     <TextInput
-                        key={input.name}
-                        label={input.label}
-                        name={input.name}
+                        key={name}
+                        label={label}
+                        name={name}
                         register={register}
-                        type={input.type}
-                        registerOptions={input.registerOptions}
+                        type={type}
+                        registerOptions={registerOptions}
                     />
                 ))}
                 <Button type="submit" variant="contained">{submitText}</Button>
