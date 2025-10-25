@@ -1,4 +1,4 @@
-import { InputProps } from "@/shared/ui/form/input/input.props";
+import { InputProps } from "@/shared/";
 
 export const REGISTER_INPUTS: InputProps[] = [
     {

@@ -1,4 +1,4 @@
-import { ApiError } from "@/entities/api-error";
+import { ApiError } from "@/entities/";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { LOGIN_KEY, PROFILE_KEY } from '../constants/queries';
 import type { LoginDto } from "../models";

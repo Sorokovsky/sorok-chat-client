@@ -1,4 +1,4 @@
-import { InputProps } from '@/shared/ui/form/input/input.props';
+import { InputProps } from '@/shared/';
 
 export const LOGIN_INPUTS: Omit<InputProps, "register">[] = [
     {

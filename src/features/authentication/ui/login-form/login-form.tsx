@@ -1,7 +1,7 @@
 import { Form } from "@/shared";
 import type { FC, JSX } from "react";
 import { useLogin } from "@/features/authentication";
-import { LOGIN_INPUTS } from "@/features/authentication/constants";
+import { LOGIN_INPUTS } from "@/features/authentication";
 import type { LoginDto } from "../../models";
 
 export const LoginForm: FC = (): JSX.Element => {

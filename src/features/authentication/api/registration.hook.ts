@@ -1,4 +1,4 @@
-import type { ApiError } from "@/entities/api-error";
+import type { ApiError } from "@/entities";
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { REGISTRATION_KEY, PROFILE_KEY } from '../constants/queries';
 import type { RegistrationDto } from '../models/registration';
