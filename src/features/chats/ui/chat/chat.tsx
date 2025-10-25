@@ -6,7 +6,8 @@ import { Typography } from '@mui/material';
 import { Messages } from '../messages/messages';
 import { SendMessage } from '../send-message/send-message';
 
-export const Chat: FC<ChatProps> = ({chat}): JSX.Element => {
+export const Chat: FC<ChatProps> = ({ chat }): JSX.Element => {
+    "use no memo"
     return (
         <div className={clsx(styles.chat)}>
             <div className={clsx(styles.heading)}>

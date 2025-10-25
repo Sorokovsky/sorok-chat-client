@@ -1,7 +1,10 @@
 .chat {
     padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
     padding-right: 0;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
+    height: calc(100vh - 64px);
 }
 
 .heading {

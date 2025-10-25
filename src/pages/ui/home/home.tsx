@@ -4,6 +4,7 @@ import styles from "./home.module.scss";
 import { Chat, ChatList, useCurrentChat, useGetChannelsByMe } from "@/features/chats";
 
 export const HomePage: FC = (): JSX.Element => {
+    "use no memo"
     const { data: chats } = useGetChannelsByMe();
     const currentChat = useCurrentChat(store => store.currentChat);
     return (

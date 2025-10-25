@@ -11,6 +11,7 @@ const getAuthorFullName = (author: User): string => {
 };
 
 export const MessageItem: FC<MessageItemProps> = ({ message }): JSX.Element => {
+    "use no memo"
     const isCorrect = isMessageNotChanged(message);
     const detectionText: string = `${isCorrect ? "Не з": "З"}мінено несанкціонованим шляхом`;
     return (
