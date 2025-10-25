@@ -9,7 +9,7 @@ export const Messages: FC<MessagesProps> = ({ messages }): JSX.Element => {
     const ref = useRef<HTMLDivElement | null>(null);
     useEffect(() => {
         ref.current?.scrollIntoView({behavior: "smooth", block: "end"});
-    }, [ref.current]);
+    }, [messages]);
     return (
         <ul className={clsx(styles.messages)}>
             {messages.map(message => <MessageItem key={message.id} message={message} />)}
