@@ -1,0 +1,12 @@
+.item {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: .3s all ease;
+    cursor: pointer;
+    margin-top: 10px;
+    &:hover {
+        background-color: gray;
+        color: #fff;
+    }
+}
