@@ -13,7 +13,7 @@ export const Header: FC = (): JSX.Element => {
     const { data: user } = useGetProfile();
     return (
         <AppBar
-            position="sticky"
+
             component={"header"}
         >
             <Toolbar
