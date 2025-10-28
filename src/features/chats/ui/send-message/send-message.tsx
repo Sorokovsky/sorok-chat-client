@@ -1,6 +1,6 @@
 import { TextInput } from "@/shared";
 import { Button } from "@mui/material";
-import { FC, JSX, useEffect } from "react";
+import { FC, JSX, useCallback, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import clsx from 'classnames';
 import styles from "./send-message.module.scss";
@@ -16,14 +16,14 @@ export const SendMessage: FC = (): JSX.Element => {
     const { mutate: send, data: retrievedChat } = useSendMessage();
     const { currentChat: chat, setCurrentChat } = useCurrentChat();
 
-    const sendMessage = (data: unknown) => {
+    const sendMessage = useCallback((data: unknown) => {
         if (typeof data === "object" && data) {
             const message = data as NewMessage;
             message.mac = signMessage(message.text, user!.macSecret);
             send(message);
             reset();
         }
-    };
+    }, []);
 
     useEffect(() => {
         if (retrievedChat && chat && chat.messages) {
