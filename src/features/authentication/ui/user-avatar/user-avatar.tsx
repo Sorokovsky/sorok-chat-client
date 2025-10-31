@@ -14,7 +14,10 @@ export const UserAvatar: FC = (): JSX.Element => {
     const toggleUserMenu = useUserMenuStore(state => state.toggle);
     return (
         <>
-            <IconButton onClick={toggleUserMenu} className={clsx(styles.avatar)}>
+            <IconButton
+                onClick={toggleUserMenu}
+                className={clsx(styles.avatar)}
+            >
                 <Avatar>{user && formatUserName(user)}</Avatar>
                 <UserMenu/>
             </IconButton>
