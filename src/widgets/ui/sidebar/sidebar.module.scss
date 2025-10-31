@@ -1,0 +1,29 @@
+.sidebar {
+  background: #fff;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  height: 100%;
+  overflow-y: scroll;
+  transition: .5s all ease;
+  min-width: 300px;
+
+  &.left {
+    border-right: 1px solid grey;
+    left: -100%;
+
+    &.open {
+      left: 0;
+    }
+  }
+
+  &.right {
+    border-left: 1px solid grey;
+    right: -100%;
+
+    &.open {
+      right: 0;
+    }
+  }
+}

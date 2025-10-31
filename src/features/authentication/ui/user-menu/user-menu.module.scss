@@ -1,0 +1,21 @@
+.menu {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  right: 0;
+  background: #1976d2;
+  padding: 20px 10px;
+  border-radius: 20px;
+  color: white;
+  transition: opacity .5s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+  }
+}

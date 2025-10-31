@@ -1,17 +1,12 @@
-import { FC, JSX, useEffect, useState, useCallback } from 'react';
+import {FC, JSX, useEffect} from 'react';
 import clsx from 'classnames';
 import styles from "./home.module.scss";
-import { Chat, ChatList, useCurrentChat, useGetChannelsByMe } from "@/features/chats";
+import {Chat, ChatsSidebar, useCurrentChat, useGetChannelsByMe} from "@/features/chats";
 
 export const HomePage: FC = (): JSX.Element => {
     "use no memo"
     const { data: chats } = useGetChannelsByMe();
     const { currentChat, setCurrentChat, clearCurrentChat } = useCurrentChat();
-    const [isChatsOpened, setIsChatsOpened] = useState(true);
-
-    const toggleIsOpened = useCallback(() => {
-        setIsChatsOpened(prev => !prev);
-    }, [isChatsOpened]);
 
     useEffect(() => {
         if (currentChat && chats && Array.isArray(chats)) {
@@ -22,10 +17,10 @@ export const HomePage: FC = (): JSX.Element => {
                 clearCurrentChat();
             }
         }
-    }, [chats]);
+    }, [chats, clearCurrentChat, currentChat, setCurrentChat]);
     return (
         <div className={clsx(styles.page)}>
-            <ChatList title="Чати" chats={chats || []} opened={isChatsOpened} toggleIsOpened={toggleIsOpened} />
+            <ChatsSidebar/>
             {currentChat && <Chat chat={currentChat} />}
         </div>
     )

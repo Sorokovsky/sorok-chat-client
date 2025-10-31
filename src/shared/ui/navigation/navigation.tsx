@@ -1,14 +1,19 @@
-import { useGetRoutesByAccess } from "../../api";
-import type { FC, JSX } from "react";
-import { NavigationItem } from "./navigation-item/navigation-item";
-import clsx from "classnames";
-import styles from "./navigation.module.scss";
+import type {FC, JSX} from "react";
+import {ChatsSidebarToggle} from "@/features/chats";
+import {Avatar} from "@mui/material";
+import {Link, useLocation} from "react-router";
+import {HOME_ROUTE} from "@/shared";
+import {UserAvatar} from "@/features/authentication";
 
 export const Navigation: FC = (): JSX.Element => {
-    const routes = useGetRoutesByAccess();
+    const {pathname} = useLocation();
     return (
-        <ul className={clsx(styles.menu)}>
-            {routes.map(route => <NavigationItem key={route.path} route={route} />)}
-        </ul>
+        <>
+            {pathname === HOME_ROUTE.path && <ChatsSidebarToggle/>}
+            <Link to={HOME_ROUTE.path}>
+                <Avatar src={"/logo.svg"}/>
+            </Link>
+            <UserAvatar/>
+        </>
     );
 };

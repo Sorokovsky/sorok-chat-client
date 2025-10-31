@@ -1,6 +1,6 @@
-import { create } from "zustand";
-import type { Channel } from "../models";
-import type { CurrentChatStore } from "./current-chat.type";
+import {create} from "zustand";
+import type {Channel} from "../../models";
+import type {CurrentChatStore} from "./current-chat.type";
 
 export const useCurrentChat = create<CurrentChatStore>((set, get) => {
     return {

@@ -1,40 +1,5 @@
 .chats {
-    padding: 10px 20px;
-    border-right: 1px solid grey;
-    flex: 0 0 300px;
-    height: calc(100vh - 64px);
-    overflow-y: scroll;
-}
-.toggle {
-    display: none;
-}
-
-@media  screen and (max-width: 890px) {
-    .chats {
-        position: relative;
-        z-index: 1;
-        padding: 0;
-        flex: 0 0 0;
-        width: 0;
-        &.open {
-            padding: 10px 20px;
-            flex: 0 0 100%;
-            transition: .3s flex-basis ease;
-        }
-    }
-
-    .toggle {
-        display: block;
-        position: fixed;
-        bottom: 25%;
-        left: 10px;
-        background-color: transparent;
-        border: none;
-        font-size: 30px;
-        transition: .3s all ease;
-        transform: rotateX(180);
-        &.open {
-            left: 90%;
-        }
-    }
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
 }

@@ -1,9 +1,9 @@
-import { useMutation } from "@tanstack/react-query";
-import { ADD_USER_TO_CHAT } from '../constants/queries';
-import { useCurrentChat } from '../stores/current-chat.store';
-import { channelsService } from "./channels.service";
-import { useNavigate } from 'react-router';
-import { HOME_ROUTE } from "@/shared";
+import {useMutation} from "@tanstack/react-query";
+import {ADD_USER_TO_CHAT} from '../constants/queries';
+import {useCurrentChat} from '@/features/chats';
+import {channelsService} from "./channels.service";
+import {useNavigate} from 'react-router';
+import {HOME_ROUTE} from "@/shared";
 
 export const useAddUser = () => {
     const chat = useCurrentChat(store => store.currentChat);

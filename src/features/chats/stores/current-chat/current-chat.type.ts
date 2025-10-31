@@ -1,4 +1,4 @@
-import { Channel } from "../models";
+import {Channel} from "../../models";
 
 export type CurrentChatStore = {
     currentChat: Channel | null;

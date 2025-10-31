@@ -1,2 +1,2 @@
 export * from "./ui/";
-export * from "../shared/api";
+export * from "./types/";
