@@ -20,7 +20,6 @@ export const SendMessage: FC = (): JSX.Element => {
         if (typeof data === "object" && data) {
             const message = data as NewMessage;
             message.text = encrypt(message.text, user!.macSecret);
-            console.log(message.text);
             message.mac = signMessage(message.text, user!.macSecret);
             send(message);
             reset();
